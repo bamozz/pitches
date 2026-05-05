@@ -6,13 +6,20 @@
 <title>A Fine Balance Physiotherapy — Joondanna, Perth</title>
 <style>
 :root{
-  --ink:#1c2a26;
-  --ink-2:#5a6a64;
-  --paper:#f6f4ee;
-  --line:#e2dccd;
-  --accent:#5b8a7a;
-  --accent-2:#d9b27c;
-  --accent-soft:#e9efe9;
+  --ink:#4d5153;
+  --ink-2:#7e8285;
+  --paper:#fdfcfa;
+  --line:#e8e3db;
+  --peach:#f0936b;
+  --peach-deep:#d9743f;
+  --peach-soft:#fdf0e9;
+  --green:#3a7c5e;
+  --green-deep:#2c6049;
+  --green-soft:#e6f0ec;
+  /* legacy aliases so unchanged rules still work */
+  --accent:var(--green);
+  --accent-2:var(--peach);
+  --accent-soft:var(--green-soft);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -30,7 +37,7 @@ header.site .container{display:flex;align-items:center;justify-content:space-bet
 .brand{display:flex;align-items:center;gap:12px;font-weight:600}
 .brand .mark{
   width:38px;height:38px;border-radius:50%;
-  background:radial-gradient(circle at 50% 60%, var(--accent-soft) 0 30%, var(--accent) 32% 100%);
+  background:radial-gradient(circle at 50% 60%, var(--peach-soft) 0 30%, var(--peach) 32% 100%);
   position:relative;
 }
 .brand .mark::after{
@@ -41,9 +48,10 @@ header.site .container{display:flex;align-items:center;justify-content:space-bet
 .brand .name small{display:block;font-weight:400;font-size:11.5px;color:var(--ink-2);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
 nav.main a{margin-left:28px;color:var(--ink-2);font-size:15px}
 nav.main a:hover{color:var(--ink)}
-.cta{display:inline-block;background:var(--accent);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.2px;transition:transform .15s ease}
-.cta:hover{transform:translateY(-1px)}
-.cta.outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.cta{display:inline-block;background:var(--green);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.2px;transition:transform .15s ease,background .15s ease}
+.cta:hover{transform:translateY(-1px);background:var(--green-deep)}
+.cta.outline{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+.cta.outline:hover{background:var(--green-soft);transform:translateY(-1px)}
 
 /* Hero */
 .hero{padding:96px 0 100px;position:relative;overflow:hidden}
@@ -54,14 +62,14 @@ nav.main a:hover{color:var(--ink)}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-art{
   aspect-ratio:1/1.1;border-radius:200px 200px 18px 18px;
-  background:linear-gradient(160deg, var(--accent) 0%, #2f5044 100%);
+  background:linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
   position:relative;overflow:hidden;
-  box-shadow:0 30px 60px -30px rgba(28,42,38,.35);
+  box-shadow:0 30px 60px -30px rgba(58,124,94,.38);
 }
 .hero-art .leaf{
   position:absolute;left:50%;bottom:0;transform:translateX(-50%);
   width:80%;aspect-ratio:1/1;
-  background:radial-gradient(circle at 50% 0%, var(--accent-2) 0 6%, transparent 7%),
+  background:radial-gradient(circle at 50% 0%, var(--peach) 0 6%, transparent 7%),
              radial-gradient(circle at 50% 100%, rgba(255,255,255,.08) 0 60%, transparent 61%);
 }
 .hero-art .figure{
@@ -71,7 +79,7 @@ nav.main a:hover{color:var(--ink)}
   background:linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.05) 100%);
   border:1px solid rgba(255,255,255,.25);
 }
-.hero-art .dot{position:absolute;top:18%;right:14%;width:46px;height:46px;border-radius:50%;background:var(--accent-2);opacity:.85}
+.hero-art .dot{position:absolute;top:18%;right:14%;width:46px;height:46px;border-radius:50%;background:var(--peach);opacity:.9}
 
 /* Promise strip */
 .promise{padding:28px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -87,12 +95,13 @@ nav.main a:hover{color:var(--ink)}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column;gap:14px}
 .card:hover{transform:translateY(-2px);box-shadow:0 20px 30px -22px rgba(28,42,38,.2)}
 .card .ico{
-  width:48px;height:48px;border-radius:14px;background:var(--accent-soft);
-  display:grid;place-items:center;color:var(--accent);font-weight:700;
+  width:48px;height:48px;border-radius:14px;background:var(--peach-soft);
+  display:grid;place-items:center;color:var(--peach-deep);font-weight:700;
 }
 .card h3{margin:0;font-size:20px}
 .card p{margin:0;color:var(--ink-2);font-size:15.5px}
-.card a{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-top:auto}
+.card a{color:var(--green);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-top:auto}
+.card a:hover{color:var(--green-deep)}
 
 /* Approach */
 .approach{background:#fff;padding:96px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -102,7 +111,7 @@ nav.main a:hover{color:var(--ink)}
 .steps{margin:32px 0 0;padding:0;list-style:none}
 .steps li{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
 .steps li:last-child{border-bottom:none}
-.steps li b{color:var(--accent);font-weight:700}
+.steps li b{color:var(--peach-deep);font-weight:700}
 .steps li span{color:var(--ink-2)}
 
 /* Quote */
@@ -111,19 +120,19 @@ nav.main a:hover{color:var(--ink)}
   font-size:28px;line-height:1.4;margin:0 auto;max-width:780px;
   color:var(--ink);font-weight:500;letter-spacing:-.2px;
 }
-.quote blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--accent-2);margin:0 auto 28px}
+.quote blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--peach);margin:0 auto 28px}
 .quote cite{display:block;margin-top:24px;color:var(--ink-2);font-style:normal;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 
 /* Contact */
-.contact{background:var(--ink);color:#f6f4ee;padding:96px 0}
+.contact{background:var(--green-deep);color:#f6f4ee;padding:96px 0}
 .contact .container{display:grid;grid-template-columns:1.05fr .95fr;gap:64px}
 .contact h2{font-size:40px;margin:0 0 18px;letter-spacing:-.4px;line-height:1.15}
 .contact p{color:#cdd5d2;margin:0 0 18px;font-size:17px}
 .contact .info{display:flex;flex-direction:column;gap:14px;margin-top:28px}
 .contact .info a{color:#fff;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:6px;width:fit-content}
-.contact .info a:hover{border-color:var(--accent-2)}
+.contact .info a:hover{border-color:var(--peach)}
 .contact .panel{background:rgba(255,255,255,.06);border-radius:18px;padding:32px}
-.contact .panel h3{margin:0 0 16px;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.contact .panel h3{margin:0 0 16px;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--peach)}
 .contact .panel dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 24px;color:#cdd5d2;font-size:15px}
 .contact .panel dt{color:#fff}
 
@@ -219,11 +228,11 @@ footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:
 <section class="approach" id="approach">
   <div class="container">
     <div class="hero-art" aria-hidden="true" style="aspect-ratio:1/.95;border-radius:18px 18px 200px 18px">
-      <div class="dot" style="top:auto;bottom:14%;right:14%;background:var(--paper);opacity:.5"></div>
+      <div class="dot" style="top:auto;bottom:14%;right:14%;background:var(--peach-soft);opacity:.7"></div>
       <div class="figure" style="top:35%;border-radius:30% 30% 50% 50% / 65% 65% 35% 35%"></div>
     </div>
     <div>
-      <div class="eyebrow" style="color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:14px">How we work</div>
+      <div class="eyebrow" style="color:var(--green);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:14px">How we work</div>
       <h2>Outcomes first. Always.</h2>
       <p>We use modern, evidence-based assessment to find the actual cause of your pain or stiffness — not just the place that hurts. Then we build a plan you can stick to, with check-ins so we know it is working.</p>
       <ol class="steps">
