@@ -225,31 +225,9 @@ nav.main a:hover{background:var(--sec-s);color:var(--sec-d)}
 .about-visual{position:relative}
 .about-blob{
   aspect-ratio:1/1.12;
-  border-radius:42% 58% 54% 46% / 46% 50% 54% 54%;
-  background:linear-gradient(140deg,var(--ter-s) 0%,var(--ter) 58%,var(--ter-d) 100%);
+  border-radius:28px;
+  background:url('https://instagram.fyto1-1.fna.fbcdn.net/v/t51.82787-15/622154984_18091054037076133_1571144772645414362_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ig_cache_key=MjM3ODE3MjUyODE0MjUyODAxMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=FRkqds9xlYIQ7kNvwEtPaD9&_nc_oc=AdqFWf47lcinQ5ChzRR-sncjGZMciMgFAx2GV9vysqPujq2cW4OvtOFjtgAemHypyqHkUNtCytqtLKhIPo8g7wdl&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fyto1-1.fna&_nc_gid=4aTXWB9KDnWPsvykCOznbQ&_nc_ss=7a22e&oh=00_Af66kqKhn5P9kke-oZJ5-ZdD77Oe7F6FOtJr6npZTV-sDA&oe=6A001F0A') -135px 0px/cover no-repeat;
   position:relative;overflow:hidden;
-}
-.about-blob::after{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(circle at 32% 72%,rgba(251,168,108,.22) 0%,transparent 48%),
-    radial-gradient(circle at 68% 22%,rgba(255,255,255,.12) 0%,transparent 40%);
-}
-.about-tag{
-  position:absolute;bottom:-18px;right:-18px;
-  background:var(--white);border-radius:var(--r-md);
-  padding:20px 24px;box-shadow:0 14px 36px -10px rgba(0,0,0,.14);text-align:center;
-}
-.about-tag big{
-  display:block;font-family:'Fraunces',serif;
-  font-size:34px;font-weight:500;color:var(--pri-d);line-height:1;
-}
-.about-tag small{font-size:11.5px;color:var(--ink-2);font-weight:500}
-.about-tag2{
-  position:absolute;top:-14px;left:-18px;
-  background:var(--sec);color:#fff;border-radius:var(--r-md);
-  padding:14px 18px;box-shadow:0 8px 24px -8px rgba(170,137,36,.42);
-  font-size:13px;font-weight:600;line-height:1.4;
 }
 .about-content p{font-size:16.5px;color:var(--ink-2);line-height:1.78;margin-bottom:18px}
 .check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:30px}
@@ -261,33 +239,9 @@ nav.main a:hover{background:var(--sec-s);color:var(--sec-d)}
   font-size:11px;font-weight:700;margin-top:2px;
 }
 
-/* ── PROCESS ── */
-.process{padding:104px 0}
-.process .hdr{text-align:center;margin-bottom:64px}
-.process .hdr .section-label{justify-content:center}
-.process .hdr .section-title{margin-inline:auto}
-.steps-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.steps-wrap::before{
-  content:'';position:absolute;top:32px;left:12.5%;right:12.5%;height:1px;
-  background:linear-gradient(90deg,var(--pri-l),var(--sec-l),var(--ter-m));z-index:0;
-}
-.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative;z-index:1}
-.step-num{
-  width:64px;height:64px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces',serif;font-size:24px;font-weight:500;
-  margin-bottom:24px;border:2px solid transparent;transition:transform .2s;
-}
-.step:hover .step-num{transform:scale(1.08)}
-.step:nth-child(1) .step-num{background:var(--pri-s);color:var(--pri-d);border-color:var(--pri-l)}
-.step:nth-child(2) .step-num{background:var(--sec-s);color:var(--sec-d);border-color:var(--sec-l)}
-.step:nth-child(3) .step-num{background:var(--ter-s);color:var(--ter);border-color:rgba(58,124,94,.22)}
-.step:nth-child(4) .step-num{background:var(--ter-d);color:#fff;border-color:var(--ter-d)}
-.step h3{font-size:18px;margin-bottom:10px}
-.step p{font-size:14.5px;color:var(--ink-2);line-height:1.62}
 
 /* ── TESTIMONIALS ── */
-.testimonials{padding:104px 0;background:var(--cream)}
+.testimonials{padding:104px 0;background:var(--paper)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 .testi-card{
   background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
@@ -350,11 +304,6 @@ details[open] .faq-ico{background:var(--pri);color:#fff;transform:rotate(45deg)}
 .contact-links{display:flex;flex-direction:column;gap:16px;margin-top:8px}
 .clink{display:flex;align-items:center;gap:14px;font-size:16px;color:rgba(255,255,255,.82);transition:color .15s}
 .clink:hover{color:var(--pri-l)}
-.cl-ico{
-  width:40px;height:40px;border-radius:50%;flex-shrink:0;
-  background:rgba(255,255,255,.1);
-  display:flex;align-items:center;justify-content:center;font-size:16px;
-}
 .cpanel{
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
   border-radius:var(--r-lg);padding:36px;
@@ -374,7 +323,7 @@ details[open] .faq-ico{background:var(--pri);color:#fff;transform:rotate(45deg)}
 .hr .cl{color:rgba(255,255,255,.32)}
 
 /* ── FOOTER ── */
-footer{padding:28px 0;background:#1c2b24;color:rgba(255,255,255,.38);font-size:13px}
+footer{padding:28px 0;background:#1e3c2f;color:rgba(255,255,255,.38);font-size:13px}
 footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 footer a{color:rgba(255,255,255,.52);transition:color .15s}
 footer a:hover{color:var(--pri-l)}
@@ -385,14 +334,12 @@ footer a:hover{color:var(--pri-l)}
   .about .container,.contact .container,.faq .container{grid-template-columns:1fr;gap:44px}
   .section-title{font-size:34px}
   .trust .container,.services-grid,.testi-grid{grid-template-columns:1fr 1fr}
-  .steps-wrap{grid-template-columns:1fr 1fr;gap:36px}
-  .steps-wrap::before{display:none}
   nav.main{display:none}
 }
 @media(max-width:560px){
   .hero{min-height:560px}
   .hero h1{font-size:36px}
-  .trust .container,.services-grid,.testi-grid,.steps-wrap{grid-template-columns:1fr}
+  .trust .container,.services-grid,.testi-grid{grid-template-columns:1fr}
   .contact h2{font-size:34px}
   .faq .container{grid-template-columns:1fr}
 }
@@ -444,7 +391,7 @@ footer a:hover{color:var(--pri-l)}
     <h1>Physio that goes beyond<br>just <em>feeling better.</em></h1>
     <p class="hero-lead">Whether you're nursing an injury, managing chronic pain, or just want to move better. We give you the assessment, the plan and the follow-through you deserve.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#contact">Book your first session</a>
+      <a class="btn btn-primary" href="#contact">Book an appointment</a>
 
     </div>
     <p class="hero-note">First appointments are unhurried, because your story matters.</p>
@@ -494,11 +441,6 @@ footer a:hover{color:var(--pri-l)}
   <div class="container">
     <div class="about-visual">
       <div class="about-blob"></div>
-      <div class="about-tag">
-        <big>4.9★</big>
-        <small>from Joondanna locals</small>
-      </div>
-      <div class="about-tag2">Est. 2026<br>Joondanna, Perth</div>
     </div>
     <div class="about-content">
       <div class="section-label">Why A Fine Balance</div>
@@ -516,65 +458,35 @@ footer a:hover{color:var(--pri-l)}
 </section>
 
 <!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="hdr">
-      <div class="section-label">How it works</div>
-      <h2 class="section-title">From first call to <em>feeling yourself again.</em></h2>
-    </div>
-    <div class="steps-wrap">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Book online or call</h3>
-        <p>Same-week availability. No referral needed. Just choose a time that works.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Full initial assessment</h3>
-        <p>We listen first, then assess movement, strength and history to find the real cause.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Your personalised plan</h3>
-        <p>A clear written plan: what we do in clinic, what you do at home, and why.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Progress &amp; stay well</h3>
-        <p>Regular reviews to keep things on track. We adjust as you improve and tell you when you're done.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
   <div class="container">
     <div class="section-label">What patients say</div>
-    <h2 class="section-title">Real people, <em>real results.</em></h2>
+    <h2 class="section-title">Real patients, <em>real results.</em></h2>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <blockquote>"Finally a physio who didn't just hand me a laminated exercise sheet. They actually explained what was going on. The pain I'd had for two years improved after two sessions."</blockquote>
+        <blockquote>"I staggered into his office all bent over on a cane. After my first visit, I actually walked out without it. It has been some months since then but today I have completely come off pain medication that I had been using for a number of years. Thank you Roshan."</blockquote>
         <div class="testi-author">
-          <div class="tav tav-1">S</div>
-          <div><strong>Sarah K.</strong><span>Chronic lower back pain</span></div>
+          <div class="tav tav-1">F</div>
+          <div><strong>Fernando Giaimo</strong></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <blockquote>"Booked the day after I called and was seen on time. The treatment plan was clear and realistic. I actually stuck to it for once because I understood the reasoning behind it."</blockquote>
+        <blockquote>"I had a massage here and went to the physio and they were both excellent! Very professional and nice, and helped with my horrible back pain."</blockquote>
         <div class="testi-author">
-          <div class="tav tav-2">M</div>
-          <div><strong>Marcus T.</strong><span>Post-op knee rehab</span></div>
+          <div class="tav tav-2">T</div>
+          <div><strong>Tammi Valinsky</strong></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <blockquote>"The infrared sauna between sessions has been a game changer for my recovery. The team genuinely cares. You feel it from the minute you walk through the door."</blockquote>
+        <blockquote>"Roshan is 100% present with the client in the therapy room. He is very positive but also very real in the advice he shares. I trust him implicitly and I feel blessed to have found him."</blockquote>
         <div class="testi-author">
-          <div class="tav tav-3">J</div>
-          <div><strong>Jamie R.</strong><span>Sports injury · Joondanna</span></div>
+          <div class="tav tav-3">H</div>
+          <div><strong>Helena Boyd</strong></div>
         </div>
       </div>
     </div>
@@ -585,31 +497,31 @@ footer a:hover{color:var(--pri-l)}
 <section class="faq" id="faq">
   <div class="container">
     <div class="faq-intro">
-      <div class="section-label">Questions</div>
-      <h2 class="section-title">Things people usually want to know.</h2>
+      <div class="section-label">FAQs</div>
+      <h2 class="section-title">Things patients usually want to know.</h2>
       <p>Can't find your answer? Just call us on <a href="tel:+61894449663" style="color:var(--sec);font-weight:600">(08) 9444 9663</a>. We're happy to chat before you commit to anything.</p>
-      <a class="btn btn-primary" href="#contact">Book now</a>
+      <a class="btn btn-primary" href="#contact">Book an appointment</a>
     </div>
     <div class="faq-list">
       <details open>
-        <summary>Do I need a GP referral? <span class="faq-ico">+</span></summary>
-        <p class="faq-body">No referral needed at all. You can book directly with us for physiotherapy or massage. If you're claiming through a care plan, we'll let you know what to bring.</p>
+        <summary>What happens in a physiotherapy session? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Treatment typically combines hands-on therapy including joint mobilisation, dry needling, soft tissue work and stretching, with a personalised home exercise program delivered via cloud based software so you can follow it anywhere.</p>
       </details>
       <details>
-        <summary>How long is a first appointment? <span class="faq-ico">+</span></summary>
-        <p class="faq-body">First appointments are never rushed. We take the time to hear your history, run a proper assessment and start building your treatment plan. Not just hand you a printout at the door.</p>
+        <summary>Who will I be seeing? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Roshan Singh (BSc Physio, APAM) is the owner and practice principal with over 10 years at the clinic. Toni Kirk (BPHEd, BSc Physio, APAM) brings 12 years as a physical education teacher before moving into physio. Carol Canzirri is a remedial massage therapist with 18 years of practice in Perth.</p>
       </details>
       <details>
-        <summary>Do you accept Medicare or private health? <span class="faq-ico">+</span></summary>
-        <p class="faq-body">Yes, we accept private health insurance (HICAPS on site) and Medicare Enhanced Primary Care plans. Not sure what you're covered for? Just ask us before you book.</p>
+        <summary>What types of massage do you offer? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Carol offers remedial massage using trigger point therapy, myofascial release, sports massage and passive stretching. She also specialises in pregnancy massage, scar tissue work and craniosacral release.</p>
       </details>
       <details>
-        <summary>What is the infrared sauna good for? <span class="faq-ico">+</span></summary>
-        <p class="faq-body">Infrared sauna supports muscle recovery, reduces inflammation and improves circulation. Many patients book it between physio sessions to feel better faster. It's available as a standalone booking or as an add-on.</p>
+        <summary>Is the infrared sauna available to me? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">The sauna is exclusively available to existing patients. Each booking is private, with 40 minutes of exclusive use of the 3 person room. Towels and refreshments are provided and the sauna is pre-heated on arrival.</p>
       </details>
       <details>
-        <summary>How quickly can I get an appointment? <span class="faq-ico">+</span></summary>
-        <p class="faq-body">Usually within the same week. We deliberately keep our load manageable so you're never waiting three weeks to be seen. That's half the point.</p>
+        <summary>What are your opening hours? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Monday to Thursday 8 a.m. to 7 p.m., Friday 8 a.m. to 5 p.m. You can book online or call us on 9444 9663.</p>
       </details>
     </div>
   </div>
@@ -619,24 +531,24 @@ footer a:hover{color:var(--pri-l)}
 <section class="contact" id="contact">
   <div class="container">
     <div>
-      <h2>Ready to feel <em>better?</em></h2>
-      <p class="contact-sub">Same-week appointments are usually available. Book online, call us, or drop us a message. Whichever is easiest for you.</p>
-      <a class="btn btn-primary" href="tel:+61894449663">Call to book now</a>
+      <h2>Let's go beyond <em>just feeling better.</em></h2>
+      <p class="contact-sub">Book online, call us or visit our clinic. Whichever is easiest for you.</p>
+      <a class="btn btn-primary" href="tel:+61894449663" style="box-shadow:none;margin-bottom:34px">Book an appointment</a>
       <div class="contact-links">
-        <a class="clink" href="tel:+61894449663"><span class="cl-ico">📞</span>(08) 9444 9663</a>
-        <a class="clink" href="mailto:reception@afinebalance.physio"><span class="cl-ico">✉️</span>reception@afinebalance.physio</a>
-        <a class="clink" href="https://maps.google.com/?q=14+Green+Street+Joondanna+WA" target="_blank" rel="noopener"><span class="cl-ico">📍</span>14 Green Street, Joondanna WA 6060</a>
+        <a class="clink" href="tel:+61894449663">(08) 9444 9663</a>
+        <a class="clink" href="mailto:reception@afinebalance.physio">reception@afinebalance.physio</a>
+        <a class="clink" href="https://maps.app.goo.gl/Z36vZ1fXhs6pYzc78" target="_blank" rel="noopener">14 Green Street, Joondanna WA 6060</a>
       </div>
     </div>
     <div class="cpanel">
       <h3>Opening hours</h3>
       <div class="hours-list">
-        <div class="hr"><span class="day">Monday</span><span class="time">8:00 – 19:00</span></div>
-        <div class="hr"><span class="day">Tuesday</span><span class="time">8:00 – 19:00</span></div>
-        <div class="hr"><span class="day">Wednesday</span><span class="time">8:00 – 19:00</span></div>
-        <div class="hr"><span class="day">Thursday</span><span class="time">8:00 – 19:00</span></div>
-        <div class="hr"><span class="day">Friday</span><span class="time">8:00 – 17:00</span></div>
-        <div class="hr"><span class="day">Saturday</span><span class="time">By appointment</span></div>
+        <div class="hr"><span class="day">Monday</span><span class="time">8 a.m. – 7 p.m.</span></div>
+        <div class="hr"><span class="day">Tuesday</span><span class="time">8 a.m. – 7 p.m.</span></div>
+        <div class="hr"><span class="day">Wednesday</span><span class="time">8 a.m. – 7 p.m.</span></div>
+        <div class="hr"><span class="day">Thursday</span><span class="time">8 a.m. – 7 p.m.</span></div>
+        <div class="hr"><span class="day">Friday</span><span class="time">8 a.m. – 5 p.m.</span></div>
+        <div class="hr"><span class="day">Saturday</span><span class="cl">Closed</span></div>
         <div class="hr"><span class="day">Sunday</span><span class="cl">Closed</span></div>
       </div>
     </div>
