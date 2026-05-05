@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hobart & Kingston Chiropractic, Kingston Tasmania</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Primary — professional blue */
+  --pri:    #2E72B8;
+  --pri-d:  #1D5A9C;
+  --pri-l:  #5A96CC;
+  --pri-s:  #EBF3FB;
+  /* Secondary — warm gold */
+  --sec:    #9E7420;
+  --sec-d:  #7D5C18;
+  --sec-l:  #C4922A;
+  --sec-s:  #FBF5E6;
+  /* Tertiary — deep navy */
+  --ter:    #1B3558;
+  --ter-d:  #0F2236;
+  --ter-m:  #2E4E72;
+  --ter-s:  #E5EDF5;
+  --ter-p:  #F0F5FA;
+  /* Neutrals */
+  --ink:    #1A2C3A;
+  --ink-2:  #5C6E7E;
+  --ink-3:  #98AABC;
+  --paper:  #F8FAFB;
+  --cream:  #EDF1F7;
+  --line:   #D4DCE8;
+  --white:  #ffffff;
+  --r-sm: 12px; --r-md: 20px; --r-lg: 28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  color:var(--ink);background:var(--paper);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 28px}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:13px 24px;border-radius:999px;
+  font-weight:600;font-size:15px;letter-spacing:.01em;
+  transition:transform .15s,background .15s,box-shadow .15s;
+}
+.btn-primary{
+  background:var(--pri);color:#fff;
+  box-shadow:0 4px 18px -4px rgba(46,114,184,.4);
+}
+.btn-primary:hover{
+  background:var(--pri-d);transform:translateY(-1px);
+  box-shadow:0 8px 26px -6px rgba(46,114,184,.45);
+}
+.btn-ghost-white{
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,.55);
+}
+.btn-ghost-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-ghost{
+  background:transparent;color:var(--ink);border:1.5px solid var(--line);
+}
+.btn-ghost:hover{background:var(--cream);border-color:var(--ink-3)}
+
+/* ── HEADER ── */
+header.site{
+  padding:18px 0;position:sticky;top:0;z-index:10;
+  background:rgba(248,250,251,.93);
+  backdrop-filter:blur(14px) saturate(160%);
+  border-bottom:1px solid var(--line);
+}
+header.site .container{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{
+  font-family:'Fraunces',serif;font-weight:500;font-size:19px;
+  color:var(--ter);letter-spacing:-.01em;
+}
+.brand em{font-style:normal;color:var(--sec-l)}
+nav.main{display:flex;gap:4px;align-items:center}
+nav.main a{
+  padding:8px 16px;color:var(--ink-2);font-size:15px;font-weight:500;
+  border-radius:999px;transition:background .15s,color .15s;
+}
+nav.main a:hover{background:var(--ter-s);color:var(--ter)}
+
+/* ── DROPDOWNS ── */
+.nav-item{position:relative}
+.nav-item > a{display:flex;align-items:center;gap:5px}
+.nav-item > a::after{
+  content:'';display:block;
+  width:7px;height:7px;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);
+  opacity:.55;transition:transform .2s;
+}
+.nav-item:hover > a::after{transform:rotate(225deg) translateY(-2px)}
+.dropdown{
+  position:absolute;top:100%;left:50%;
+  padding-top:8px;min-width:190px;
+  opacity:0;pointer-events:none;
+  transform:translateX(-50%) translateY(-6px);
+  transition:opacity .18s,transform .18s;
+  z-index:100;
+}
+.dropdown-inner{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);
+  box-shadow:0 12px 36px -8px rgba(0,0,0,.14);
+  padding:8px;
+}
+.nav-item:hover .dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.dropdown a{
+  display:block;padding:9px 14px;border-radius:10px;
+  color:var(--ink);font-size:14.5px;font-weight:500;white-space:nowrap;
+  background:transparent;transition:background .12s,color .12s;
+}
+.dropdown a:hover{background:var(--ter-s);color:var(--ter)}
+
+/* ── HERO ── */
+.hero{
+  position:relative;
+  min-height:680px;
+  display:flex;align-items:center;
+  background-image:url('https://images.unsplash.com/photo-1559757175-5700dde675bc?w=2048&q=80');
+  background-size:cover;
+  background-position:center 30%;
+  padding:100px 0 110px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    105deg,
+    rgba(10,25,45,.92) 0%,
+    rgba(10,25,45,.74) 48%,
+    rgba(10,25,45,.28) 100%
+  );
+  z-index:1;
+}
+.hero .container{position:relative;z-index:2;width:1100px;margin-left:auto;margin-right:auto;padding:0 28px}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(46,114,184,.18);color:var(--pri-l);
+  padding:6px 14px;border-radius:999px;
+  font-size:13.5px;font-weight:600;margin-bottom:26px;
+  border:1px solid rgba(46,114,184,.38);
+  backdrop-filter:blur(4px);
+}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--pri-l);flex-shrink:0}
+.hero h1{
+  font-size:62px;letter-spacing:-.5px;margin-bottom:22px;
+  color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.2);max-width:680px;
+}
+.hero h1 em{font-style:italic;color:var(--pri-l)}
+.hero-lead{
+  font-size:18.5px;color:rgba(255,255,255,.82);
+  line-height:1.72;margin-bottom:36px;max-width:520px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.hero-note{font-size:13.5px;color:rgba(255,255,255,.55)}
+.hero-note strong{color:var(--pri-l);font-weight:600}
+
+/* ── TRUST STRIP ── */
+.trust{background:var(--ter);color:#fff;padding:44px 0}
+.trust .container{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;text-align:center;
+}
+.trust-stat big{
+  display:block;font-family:'Fraunces',serif;
+  font-size:44px;font-weight:500;line-height:1;
+  color:#fff;margin-bottom:7px;
+}
+.trust-stat p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.45}
+
+/* ── SECTION LABELS ── */
+.section-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--sec);margin-bottom:16px;
+}
+.section-title{font-size:40px;letter-spacing:-.35px;max-width:600px;margin-bottom:14px}
+.section-title em{font-style:italic;color:var(--pri)}
+.section-sub{font-size:17px;color:var(--ink-2);max-width:540px;margin-bottom:48px;line-height:1.7}
+
+/* ── SERVICES ── */
+.services{padding:104px 0}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:36px 30px;display:flex;flex-direction:column;gap:16px;
+  transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden;
+}
+.svc-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pri),var(--pri-l));
+  transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px -18px rgba(27,53,88,.18)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card h3{font-size:21px}
+.svc-card p{font-size:15.5px;color:var(--ink-2);line-height:1.65;flex:1}
+.svc-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--pri-d);font-weight:600;font-size:14px;transition:gap .15s;
+}
+.svc-link:hover{gap:10px}
+
+/* ── ABOUT ── */
+.about{padding:104px 0;background:var(--cream)}
+.about .container{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.about-content p{font-size:16.5px;color:var(--ink-2);line-height:1.78;margin-bottom:18px}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:30px}
+.check-list li{display:flex;align-items:flex-start;gap:14px;font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.chk{
+  flex-shrink:0;width:24px;height:24px;border-radius:50%;
+  background:var(--pri-s);color:var(--pri-d);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;margin-top:2px;
+}
+.about-visual{position:relative}
+.about-blob{
+  aspect-ratio:1/1.12;
+  border-radius:28px;
+  background:url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=800&q=80') center/cover no-repeat;
+  position:relative;overflow:hidden;
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials{padding:104px 0;background:var(--paper)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.testi-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:32px;display:flex;flex-direction:column;gap:16px;
+}
+.testi-stars{color:var(--sec-l);font-size:16px;letter-spacing:2px}
+.testi-card blockquote{
+  font-size:15.5px;line-height:1.72;color:var(--ink-2);font-style:italic;flex:1;
+}
+.testi-author{
+  display:flex;align-items:center;gap:12px;
+  padding-top:16px;border-top:1px solid var(--line);
+}
+.tav{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-size:18px;font-weight:500;
+}
+.tav-1{background:var(--pri-s);color:var(--pri-d)}
+.tav-2{background:var(--sec-s);color:var(--sec-d)}
+.tav-3{background:var(--ter-s);color:var(--ter)}
+.testi-author strong{display:block;font-size:14.5px;font-weight:600}
+.testi-author span{font-size:12.5px;color:var(--ink-3)}
+
+/* ── FAQ ── */
+.faq{padding:104px 0;background:var(--cream)}
+.faq .container{display:grid;grid-template-columns:1fr 1.6fr;gap:72px;align-items:start}
+.faq-intro .section-title{margin-bottom:18px}
+.faq-intro p{font-size:16px;color:var(--ink-2);line-height:1.72;margin-bottom:28px}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:16px;font-weight:600;cursor:pointer;list-style:none;
+}
+summary::-webkit-details-marker{display:none}
+.faq-ico{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--pri-s);color:var(--pri-d);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:300;transition:background .15s,transform .2s;
+}
+details[open] .faq-ico{background:var(--pri);color:#fff;transform:rotate(45deg)}
+.faq-body{padding:0 0 20px;font-size:15.5px;color:var(--ink-2);line-height:1.72;max-width:540px}
+
+/* ── CONTACT ── */
+.contact{padding:104px 0;background:var(--ter-d);color:#fff;position:relative;overflow:hidden}
+.contact::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.04);
+}
+.contact::after{
+  content:'';position:absolute;bottom:-100px;left:-60px;
+  width:320px;height:320px;border-radius:50%;background:rgba(46,114,184,.08);
+}
+.contact .container{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;position:relative;z-index:1}
+.contact h2{font-size:44px;letter-spacing:-.4px;margin-bottom:18px}
+.contact h2 em{font-style:italic;color:var(--pri-l)}
+.contact-sub{font-size:17px;color:rgba(255,255,255,.62);line-height:1.72;margin-bottom:34px;max-width:420px}
+.contact-links{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.clink{display:flex;align-items:center;gap:14px;font-size:16px;color:rgba(255,255,255,.82);transition:color .15s}
+.clink:hover{color:var(--pri-l)}
+.cpanel{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-lg);padding:36px;
+}
+.cpanel h3{
+  font-family:'Fraunces',serif;font-size:22px;font-weight:500;
+  color:var(--pri-l);margin-bottom:24px;
+}
+.hours-list{display:flex;flex-direction:column}
+.hr{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hr:last-child{border-bottom:none;padding-bottom:0}
+.hr .day{color:rgba(255,255,255,.62)}
+.hr .time{color:#fff;font-weight:500}
+.hr .cl{color:rgba(255,255,255,.32)}
+
+/* ── FOOTER ── */
+footer{padding:28px 0;background:#07151f;color:rgba(255,255,255,.35);font-size:13px}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer a{color:rgba(255,255,255,.52);transition:color .15s}
+footer a:hover{color:var(--pri-l)}
+.footer-social{display:flex;gap:14px;align-items:center}
+.footer-social a{display:flex;align-items:center;color:rgba(255,255,255,.52);transition:color .15s}
+.footer-social a:hover{color:var(--pri-l)}
+.footer-social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero h1{font-size:44px}
+  .about .container,.contact .container,.faq .container{grid-template-columns:1fr;gap:44px}
+  .section-title{font-size:34px}
+  .trust .container,.services-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  nav.main{display:none}
+}
+@media(max-width:560px){
+  .hero{min-height:560px}
+  .hero h1{font-size:36px}
+  .trust .container,.services-grid,.testi-grid{grid-template-columns:1fr}
+  .contact h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="container">
+    <a class="brand" href="#">Hobart <em>&amp;</em> Kingston</a>
+    <nav class="main">
+      <div class="nav-item">
+        <a href="#about">About</a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="#about">Our Chiropractors</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#services">Services</a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="#services">Chiropractic Care</a>
+            <a href="#services">Sports Chiropractic</a>
+            <a href="#services">Dry Needling</a>
+          </div>
+        </div>
+      </div>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Book an appointment</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Now accepting new patients · Kingston, Tasmania
+    </div>
+    <h1>Back in alignment.<br><em>Back to life.</em></h1>
+    <p class="hero-lead">Expert chiropractic care for back pain, neck pain, headaches and sports injuries. We find the root cause and get you moving again — properly.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">Book an appointment</a>
+      <a class="btn btn-ghost-white" href="#services">See our services</a>
+    </div>
+    <p class="hero-note">New patients always welcome. <strong>No GP referral required.</strong></p>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="container">
+    <div class="trust-stat"><big>2,000+</big><p>Patients treated across Tasmania</p></div>
+    <div class="trust-stat"><big>4.9★</big><p>Average patient rating</p></div>
+    <div class="trust-stat"><big>Est.&thinsp;2008</big><p>Trusted in Kingston for 17 years</p></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What we do</div>
+    <h2 class="section-title">Hands-on care for every kind of <em>pain and injury.</em></h2>
+    <p class="section-sub">From everyday back pain to complex sports injuries, our chiropractors have you covered.</p>
+    <div class="services-grid">
+      <div class="svc-card">
+        <h3>Chiropractic Care</h3>
+        <p>Precise spinal adjustments and joint mobilisation to relieve back pain, neck pain and headaches. Each treatment plan is tailored to your spine, your history and your goals.</p>
+        <a class="svc-link" href="#contact">Book a session →</a>
+      </div>
+      <div class="svc-card">
+        <h3>Sports Chiropractic</h3>
+        <p>Designed for athletes at every level. Whether you're training for a marathon or playing weekend footy, we keep your body performing at its best and help you recover faster from injury.</p>
+        <a class="svc-link" href="#contact">Book a session →</a>
+      </div>
+      <div class="svc-card">
+        <h3>Dry Needling</h3>
+        <p>Targeted trigger point therapy to release deep muscular tension and restore full range of motion. Often combined with chiropractic care for faster, longer-lasting results.</p>
+        <a class="svc-link" href="#contact">Book a session →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="section-label">Why Hobart &amp; Kingston</div>
+      <h2 class="section-title">Two decades of experience. <em>One clear focus.</em></h2>
+      <p>Dr. James Hobart and Dr. Sarah Kingston founded this practice with a single principle: treat people, not scans. We spend the time to understand your full picture before we put our hands on you.</p>
+      <p>Every patient leaves with a clear diagnosis, a realistic prognosis and a plan that actually makes sense — not just a temporary fix that brings you back week after week.</p>
+      <ul class="check-list">
+        <li><span class="chk">✓</span> Same chiropractor every visit — your history travels with you</li>
+        <li><span class="chk">✓</span> Evidence-based adjustments and rehabilitation</li>
+        <li><span class="chk">✓</span> Private, unhurried appointments from 40 minutes</li>
+        <li><span class="chk">✓</span> Health fund rebates processed on the spot</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <div class="about-blob"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">What <em>getting better</em> actually feels like.</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I'd had chronic lower back pain for three years and seen multiple practitioners with no lasting relief. Dr. Hobart found the problem in the first consultation. Six weeks later I'm pain-free and back running. Can't recommend highly enough."</blockquote>
+        <div class="testi-author">
+          <div class="tav tav-1">M</div>
+          <div><strong>Marcus Tran</strong></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Dr. Kingston is exceptional. She took the time to explain everything and gave me exercises I could actually do at home. My neck pain is 90% better and I now understand why it was happening in the first place."</blockquote>
+        <div class="testi-author">
+          <div class="tav tav-2">L</div>
+          <div><strong>Lucy Abernethy</strong></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I've been coming here for sports chiro for two seasons now. The combination of adjustments and dry needling keeps me on the field when I'd otherwise be sitting out. Best in Tasmania, no question."</blockquote>
+        <div class="testi-author">
+          <div class="tav tav-3">B</div>
+          <div><strong>Ben Stafford</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-intro">
+      <div class="section-label">FAQs</div>
+      <h2 class="section-title">Questions we hear most often.</h2>
+      <p>Something else on your mind? Call us on <a href="tel:+61362298800" style="color:var(--sec);font-weight:600">(03) 6229 8800</a>. We're happy to talk through your situation before you book.</p>
+      <a class="btn btn-primary" href="#contact">Book an appointment</a>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Do I need a referral to see a chiropractor? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">No. You can book directly without a GP referral. If you have relevant scans or reports from other practitioners, bring them along — they're helpful, but not required.</p>
+      </details>
+      <details>
+        <summary>How many sessions will I need? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">It depends on your condition, how long you've had it and your overall health. We give you an honest estimate at your first appointment. Most acute issues resolve in 4–8 sessions; longer-standing problems take more time.</p>
+      </details>
+      <details>
+        <summary>Is the adjustment painful? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">A chiropractic adjustment is not painful for most people. You may feel a brief sensation and hear a pop (gas releasing from the joint), often followed by immediate relief. We always explain what we're doing and check your comfort throughout.</p>
+      </details>
+      <details>
+        <summary>Do you treat children and older adults? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Yes. We regularly treat patients from teenagers through to their eighties. Techniques are adapted to suit age, size and condition. For children under 12, a parent or guardian is always present in the room.</p>
+      </details>
+      <details>
+        <summary>What should I wear or bring? <span class="faq-ico">+</span></summary>
+        <p class="faq-body">Comfortable, loose-fitting clothing is best. Bring any relevant X-rays, MRI reports or referral letters you have. For your first visit, arrive five minutes early to complete a brief health history form.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div>
+      <h2>Ready to get <em>back on track?</em></h2>
+      <p class="contact-sub">Book by phone, online or just walk in. We always have same-week availability for new patients.</p>
+      <a class="btn btn-primary" href="tel:+61362298800" style="box-shadow:none;margin-bottom:34px">Book an appointment</a>
+      <div class="contact-links">
+        <a class="clink" href="tel:+61362298800">(03) 6229 8800</a>
+        <a class="clink" href="mailto:hello@hobartandkingston.com.au">hello@hobartandkingston.com.au</a>
+        <a class="clink" href="#">12 Channel Highway, Kingston TAS 7050</a>
+      </div>
+      <div class="footer-social" style="margin-top:24px">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="cpanel">
+      <h3>Opening hours</h3>
+      <div class="hours-list">
+        <div class="hr"><span class="day">Monday</span><span class="time">7:30 a.m. – 6:30 p.m.</span></div>
+        <div class="hr"><span class="day">Tuesday</span><span class="time">7:30 a.m. – 6:30 p.m.</span></div>
+        <div class="hr"><span class="day">Wednesday</span><span class="time">7:30 a.m. – 6:30 p.m.</span></div>
+        <div class="hr"><span class="day">Thursday</span><span class="time">7:30 a.m. – 6:30 p.m.</span></div>
+        <div class="hr"><span class="day">Friday</span><span class="time">7:30 a.m. – 5 p.m.</span></div>
+        <div class="hr"><span class="day">Saturday</span><span class="time">8 a.m. – 12 p.m.</span></div>
+        <div class="hr"><span class="day">Sunday</span><span class="cl">Closed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span>© 2026 Hobart &amp; Kingston Chiropractic Pty Ltd</span>
+    <span>Concept created by <a href="#">Bamozz</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
