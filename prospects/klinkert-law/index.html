@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klinkert Law — Collaborative law and mediation, Dunedin</title>
+<style>
+:root{
+  --ink:#1d2230;
+  --ink-2:#56607a;
+  --paper:#fbfaf6;
+  --soft:#eee9dc;
+  --line:#e1dccc;
+  --accent:#314a6e;
+  --accent-2:#c98a4b;
+  --accent-soft:#e8eef5;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:Georgia,"Times New Roman",serif}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header.site{padding:24px 0;border-bottom:1px solid var(--line);background:rgba(251,250,246,.92);backdrop-filter:saturate(160%) blur(6px);position:sticky;top:0;z-index:5}
+header.site .container{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:700}
+.brand .mark{
+  width:42px;height:42px;border-radius:50%;background:var(--ink);
+  display:grid;place-items:center;color:var(--accent-2);font-family:Georgia,serif;font-size:20px;
+  letter-spacing:1px;
+}
+.brand .name{font-size:21px;letter-spacing:.4px;font-family:Georgia,serif;font-weight:600}
+.brand .name small{display:block;font-weight:500;font-size:11.5px;color:var(--ink-2);letter-spacing:.22em;text-transform:uppercase;margin-top:3px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+nav.main a{margin-left:26px;color:var(--ink-2);font-size:14.5px;font-weight:500;letter-spacing:.04em}
+nav.main a:hover{color:var(--ink)}
+.cta{display:inline-block;background:var(--accent);color:var(--paper);padding:13px 22px;border-radius:6px;font-weight:600;font-size:14.5px;letter-spacing:.04em;transition:transform .15s ease}
+.cta:hover{transform:translateY(-1px)}
+.cta.outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+
+/* Hero */
+.hero{padding:96px 0 100px;position:relative}
+.hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero .eyebrow{color:var(--accent-2);letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;font-weight:700;margin-bottom:20px}
+.hero h1{font-family:Georgia,serif;font-size:60px;line-height:1.05;margin:0 0 22px;letter-spacing:-.4px;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p.lede{font-size:19px;color:var(--ink-2);margin:0 0 32px;max-width:540px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{
+  aspect-ratio:1/1.05;
+  background:linear-gradient(160deg, var(--accent) 0%, #1a2a44 100%);
+  border-radius:18px;position:relative;overflow:hidden;
+  box-shadow:0 30px 60px -28px rgba(29,34,48,.35);
+}
+.hero-art .ring{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:60%;aspect-ratio:1/1;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.18);
+}
+.hero-art .ring.b{width:42%;border-color:rgba(255,255,255,.28)}
+.hero-art .ring.c{width:24%;border-color:var(--accent-2);opacity:.85}
+.hero-art .label{
+  position:absolute;left:24px;top:24px;color:var(--accent-2);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+}
+.hero-art .label-b{
+  position:absolute;right:24px;bottom:24px;color:rgba(255,255,255,.7);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;text-align:right;
+}
+
+/* Strip */
+.strip{padding:24px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;color:var(--ink-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.strip span b{color:var(--ink)}
+
+/* What */
+.what{padding:96px 0}
+.section-h{margin-bottom:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.section-h .eyebrow{color:var(--accent-2);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.section-h h2{font-family:Georgia,serif;font-size:44px;margin:0;letter-spacing:-.4px;line-height:1.15;font-weight:500;max-width:720px}
+.section-h p{margin:0;color:var(--ink-2);max-width:340px;font-size:16px}
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.track{background:#fff;border:1px solid var(--line);border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.track .ico{
+  width:48px;height:48px;border-radius:12px;background:var(--accent-soft);
+  display:grid;place-items:center;color:var(--accent);font-weight:800;font-family:Georgia,serif;font-size:22px;
+}
+.track h3{margin:0;font-size:24px;font-family:Georgia,serif;font-weight:500;letter-spacing:-.2px}
+.track p{margin:0;color:var(--ink-2);font-size:15.5px}
+.track ul{margin:8px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:14px}
+.track ul li{display:flex;gap:10px}
+.track ul li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent-2);margin-top:8px;flex-shrink:0}
+
+/* Process */
+.process{padding:96px 0;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.process .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.process h2{font-family:Georgia,serif;font-size:42px;margin:0 0 20px;letter-spacing:-.4px;line-height:1.15;font-weight:500}
+.process .lede{color:var(--ink-2);font-size:17px;margin:0 0 24px}
+.process ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+.process ol li{display:grid;grid-template-columns:64px 1fr;gap:24px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px}
+.process ol li b{display:block;font-family:Georgia,serif;font-size:32px;color:var(--accent);font-weight:500;line-height:1}
+.process ol li b small{display:block;font-size:11px;color:var(--accent-2);letter-spacing:.22em;text-transform:uppercase;font-family:-apple-system,sans-serif;font-weight:700;margin-top:4px}
+.process ol li h3{margin:0 0 6px;font-size:18px;font-family:Georgia,serif;font-weight:600}
+.process ol li p{margin:0;color:var(--ink-2);font-size:15px}
+
+/* Costs */
+.costs{padding:96px 0;background:var(--paper)}
+.costs .container{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.costs h2{font-family:Georgia,serif;font-size:42px;margin:0 0 18px;letter-spacing:-.4px;line-height:1.15;font-weight:500}
+.costs p{color:var(--ink-2);font-size:17px;margin:0 0 14px}
+.costs .panel{background:var(--accent);color:var(--paper);border-radius:14px;padding:36px}
+.costs .panel h3{margin:0 0 14px;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+.costs .panel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:15.5px}
+.costs .panel ul li{display:flex;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:12px}
+.costs .panel ul li:last-child{border-bottom:none}
+.costs .panel ul li b{font-family:Georgia,serif;font-weight:500}
+
+/* Contact */
+.contact{padding:96px 0;background:var(--ink);color:var(--paper)}
+.contact .container{display:grid;grid-template-columns:1.1fr .9fr;gap:64px}
+.contact h2{font-family:Georgia,serif;font-size:42px;margin:0 0 18px;letter-spacing:-.4px;line-height:1.15;font-weight:500}
+.contact p{color:#cdd5e1;margin:0 0 18px;font-size:17px}
+.contact .info{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.contact .info a{color:var(--paper);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:6px;width:fit-content;font-weight:500}
+.contact .info a:hover{border-color:var(--accent-2)}
+.contact .panel{background:rgba(255,255,255,.06);border-radius:14px;padding:32px}
+.contact .panel h3{margin:0 0 14px;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+.contact .panel dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 24px;color:#cdd5e1;font-size:15px}
+.contact .panel dt{color:var(--paper);font-weight:500}
+
+footer{padding:32px 0;color:var(--ink-2);font-size:13px;border-top:1px solid var(--line)}
+footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+@media (max-width: 880px){
+  .hero{padding:60px 0}
+  .hero .container,.process .container,.costs .container,.contact .container{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:42px}
+  .tracks{grid-template-columns:1fr}
+  .section-h{grid-template-columns:1fr}
+  nav.main{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true">K</span>
+      <span class="name">Klinkert Law<small>Dunedin · Collaborative practice & mediation</small></span>
+    </a>
+    <nav class="main">
+      <a href="#what">Services</a>
+      <a href="#process">Mediation</a>
+      <a href="#costs">Our costs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cta" href="#contact">Book a consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <div class="eyebrow">Out-of-court resolution · Dunedin lawyers</div>
+      <h1>Resolving disputes the<br><em>collaborative way.</em></h1>
+      <p class="lede">A separation. A workplace issue. A complicated estate. We help you sort it out together — outside of court, with a clear process and a fixed fee where possible. Klinkert Law has been doing this in Dunedin since the early 2000s.</p>
+      <div class="actions">
+        <a class="cta" href="#contact">Book a consultation</a>
+        <a class="cta outline" href="#process">How collaboration works</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="label">Collaborative practice</span>
+      <div class="ring"></div>
+      <div class="ring b"></div>
+      <div class="ring c"></div>
+      <span class="label-b">Mediation services<br>since the early 2000s</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="container">
+    <span><b>FDR-accredited</b> Family Dispute Resolution</span>
+    <span><b>AMINZ</b> mediator member</span>
+    <span><b>Resolution Institute</b> accredited</span>
+    <span><b>Fixed-fee options</b> on most matters</span>
+  </div>
+</div>
+
+<section class="what" id="what">
+  <div class="container">
+    <div class="section-h">
+      <div>
+        <div class="eyebrow">What we do</div>
+        <h2>Two ways to work with Klinkert Law.</h2>
+      </div>
+      <p>Whichever path fits your situation, we will tell you upfront what is involved, what it costs and how long it should take.</p>
+    </div>
+    <div class="tracks">
+      <div class="track">
+        <div class="ico">L</div>
+        <h3>Collaborative legal services</h3>
+        <p>Practical legal advice for the things that matter — without escalating into a courtroom unless absolutely necessary.</p>
+        <ul>
+          <li>Family separation & parenting</li>
+          <li>Relationship property</li>
+          <li>Business, companies & partnerships</li>
+          <li>Buying & selling property / conveyancing</li>
+          <li>Wills, EPAs, estates & trusts</li>
+          <li>Asset protection & planning</li>
+        </ul>
+      </div>
+      <div class="track">
+        <div class="ico">M</div>
+        <h3>Mediation services</h3>
+        <p>Trained, accredited mediation that helps two parties find a workable agreement — quicker, cheaper and less damaging than court.</p>
+        <ul>
+          <li>Family Dispute Resolution (government funded)</li>
+          <li>Relationship property disputes</li>
+          <li>Employment & workplace disputes</li>
+          <li>Estate & elder person's disputes</li>
+          <li>Property & business disputes</li>
+          <li>Commercial (lease & shareholder) disputes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div>
+      <div class="eyebrow" style="color:var(--accent-2);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:14px">How it works</div>
+      <h2>Collaborative practice, in plain English.</h2>
+      <p class="lede">Most disputes do not need a courtroom. Collaborative practice is a structured way for two people, with their lawyers in the room, to work towards an agreement they can both live with. Here is what it actually looks like in Dunedin.</p>
+      <a class="cta" href="#contact">Talk to us about your situation</a>
+    </div>
+    <ol>
+      <li>
+        <b>1<small>Step</small></b>
+        <div>
+          <h3>An initial conversation</h3>
+          <p>You tell us what is going on, in your own words. We tell you whether collaborative practice or mediation is suitable, or whether something else makes more sense.</p>
+        </div>
+      </li>
+      <li>
+        <b>2<small>Step</small></b>
+        <div>
+          <h3>A defined process & fee</h3>
+          <p>Before anything begins, you know what is included, what is not, and what it costs — fixed-fee options where possible.</p>
+        </div>
+      </li>
+      <li>
+        <b>3<small>Step</small></b>
+        <div>
+          <h3>Working together</h3>
+          <p>Structured sessions with both parties and their lawyers, focused on agreement rather than escalation. We keep things constructive.</p>
+        </div>
+      </li>
+      <li>
+        <b>4<small>Step</small></b>
+        <div>
+          <h3>A written outcome</h3>
+          <p>Once agreement is reached, we draft the formal documentation so the resolution holds up legally and practically.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="costs" id="costs">
+  <div class="container">
+    <div>
+      <h2>Want to know costs upfront? So do we.</h2>
+      <p>We publish GST-inclusive fees for the most common matters, and offer fixed-fee options for many. You will not get an open-ended hourly rate quote followed by a surprise.</p>
+      <p>If your matter does not fit a standard package, we will give you a clear written estimate before any work begins.</p>
+    </div>
+    <aside class="panel">
+      <h3>Indicative fees · GST inclusive</h3>
+      <ul>
+        <li><span>Initial conversation</span><b>No charge</b></li>
+        <li><span>Will (single)</span><b>From fixed fee</b></li>
+        <li><span>Enduring Power of Attorney</span><b>From fixed fee</b></li>
+        <li><span>Family Dispute Resolution mediation</span><b>Govt-funded option</b></li>
+        <li><span>Conveyancing (sale or purchase)</span><b>Fixed fee</b></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div>
+      <h2>Get in touch with Klinkert Law.</h2>
+      <p>Reach out for a no-cost initial conversation. We will tell you whether we are the right fit and what your next step should be — clearly and quickly.</p>
+      <div class="info">
+        <a href="tel:+6434777267">+64 3 477 7267</a>
+        <a href="mailto:reception@klinkertlaw.co.nz">reception@klinkertlaw.co.nz</a>
+        <a href="https://maps.google.com/?q=29+Hope+St+Dunedin+9016" target="_blank" rel="noopener">29 Hope Street, Dunedin 9016</a>
+      </div>
+    </div>
+    <aside class="panel">
+      <h3>Office hours</h3>
+      <dl>
+        <dt>Monday – Friday</dt><dd>9:00 – 17:00</dd>
+        <dt>Mediation</dt><dd>Scheduled by appointment</dd>
+        <dt>FDR sessions</dt><dd>Govt-funded, by referral</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Klinkert Law · Dunedin, New Zealand</span>
+    <span>Concept by Bamozz</span>
+  </div>
+</footer>
+
+</body>
+</html>

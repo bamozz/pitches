@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Fine Balance Physiotherapy — Joondanna, Perth</title>
+<style>
+:root{
+  --ink:#1c2a26;
+  --ink-2:#5a6a64;
+  --paper:#f6f4ee;
+  --line:#e2dccd;
+  --accent:#5b8a7a;
+  --accent-2:#d9b27c;
+  --accent-soft:#e9efe9;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header.site{padding:22px 0;background:transparent;position:sticky;top:0;z-index:5;backdrop-filter:saturate(160%) blur(6px);background:rgba(246,244,238,.85);border-bottom:1px solid var(--line)}
+header.site .container{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600}
+.brand .mark{
+  width:38px;height:38px;border-radius:50%;
+  background:radial-gradient(circle at 50% 60%, var(--accent-soft) 0 30%, var(--accent) 32% 100%);
+  position:relative;
+}
+.brand .mark::after{
+  content:"";position:absolute;inset:35% 20% 35% 20%;
+  border-radius:50%;background:var(--paper);
+}
+.brand .name{font-size:19px;letter-spacing:.2px}
+.brand .name small{display:block;font-weight:400;font-size:11.5px;color:var(--ink-2);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+nav.main a{margin-left:28px;color:var(--ink-2);font-size:15px}
+nav.main a:hover{color:var(--ink)}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.2px;transition:transform .15s ease}
+.cta:hover{transform:translateY(-1px)}
+.cta.outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+
+/* Hero */
+.hero{padding:96px 0 100px;position:relative;overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:58px;line-height:1.05;margin:0 0 22px;letter-spacing:-.6px;font-weight:600}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lede{font-size:19px;color:var(--ink-2);margin:0 0 32px;max-width:520px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{
+  aspect-ratio:1/1.1;border-radius:200px 200px 18px 18px;
+  background:linear-gradient(160deg, var(--accent) 0%, #2f5044 100%);
+  position:relative;overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(28,42,38,.35);
+}
+.hero-art .leaf{
+  position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+  width:80%;aspect-ratio:1/1;
+  background:radial-gradient(circle at 50% 0%, var(--accent-2) 0 6%, transparent 7%),
+             radial-gradient(circle at 50% 100%, rgba(255,255,255,.08) 0 60%, transparent 61%);
+}
+.hero-art .figure{
+  position:absolute;left:50%;top:42%;transform:translateX(-50%);
+  width:62%;aspect-ratio:1/1.4;
+  border-radius:50% 50% 30% 30% / 35% 35% 65% 65%;
+  background:linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.05) 100%);
+  border:1px solid rgba(255,255,255,.25);
+}
+.hero-art .dot{position:absolute;top:18%;right:14%;width:46px;height:46px;border-radius:50%;background:var(--accent-2);opacity:.85}
+
+/* Promise strip */
+.promise{padding:28px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.promise .container{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;color:var(--ink-2);font-size:14px}
+.promise b{display:block;color:var(--ink);font-size:16px;font-weight:600;margin-bottom:4px}
+
+/* Services */
+.services{padding:96px 0}
+.section-h{margin-bottom:40px}
+.section-h .eyebrow{color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.section-h h2{font-size:40px;margin:0;letter-spacing:-.4px;max-width:680px;line-height:1.15}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column;gap:14px}
+.card:hover{transform:translateY(-2px);box-shadow:0 20px 30px -22px rgba(28,42,38,.2)}
+.card .ico{
+  width:48px;height:48px;border-radius:14px;background:var(--accent-soft);
+  display:grid;place-items:center;color:var(--accent);font-weight:700;
+}
+.card h3{margin:0;font-size:20px}
+.card p{margin:0;color:var(--ink-2);font-size:15.5px}
+.card a{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin-top:auto}
+
+/* Approach */
+.approach{background:#fff;padding:96px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.approach .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.approach h2{font-size:40px;margin:0 0 20px;letter-spacing:-.4px;line-height:1.15}
+.approach p{color:var(--ink-2);font-size:17px;margin:0 0 16px}
+.steps{margin:32px 0 0;padding:0;list-style:none}
+.steps li{display:grid;grid-template-columns:32px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps li b{color:var(--accent);font-weight:700}
+.steps li span{color:var(--ink-2)}
+
+/* Quote */
+.quote{padding:96px 0;text-align:center}
+.quote blockquote{
+  font-size:28px;line-height:1.4;margin:0 auto;max-width:780px;
+  color:var(--ink);font-weight:500;letter-spacing:-.2px;
+}
+.quote blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--accent-2);margin:0 auto 28px}
+.quote cite{display:block;margin-top:24px;color:var(--ink-2);font-style:normal;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+
+/* Contact */
+.contact{background:var(--ink);color:#f6f4ee;padding:96px 0}
+.contact .container{display:grid;grid-template-columns:1.05fr .95fr;gap:64px}
+.contact h2{font-size:40px;margin:0 0 18px;letter-spacing:-.4px;line-height:1.15}
+.contact p{color:#cdd5d2;margin:0 0 18px;font-size:17px}
+.contact .info{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.contact .info a{color:#fff;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:6px;width:fit-content}
+.contact .info a:hover{border-color:var(--accent-2)}
+.contact .panel{background:rgba(255,255,255,.06);border-radius:18px;padding:32px}
+.contact .panel h3{margin:0 0 16px;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.contact .panel dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 24px;color:#cdd5d2;font-size:15px}
+.contact .panel dt{color:#fff}
+
+/* Footer */
+footer{padding:32px 0;color:var(--ink-2);font-size:13px}
+footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+@media (max-width: 880px){
+  .hero{padding:60px 0}
+  .hero .container,.approach .container,.contact .container{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:42px}
+  .cards,.promise .container{grid-template-columns:1fr 1fr}
+  nav.main{display:none}
+}
+@media (max-width: 560px){
+  .cards,.promise .container{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">A Fine Balance<small>Physiotherapy · Joondanna</small></span>
+    </a>
+    <nav class="main">
+      <a href="#services">Services</a>
+      <a href="#approach">Our approach</a>
+      <a href="#story">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cta" href="#contact">Book an appointment</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Move better.<br>Recover faster.<br><em>Stay balanced.</em></h1>
+      <p class="lede">A small, considered physiotherapy and massage clinic in Joondanna. Modern assessment, careful hands and treatment plans built around your goals — never around a 15-minute slot.</p>
+      <div class="actions">
+        <a class="cta" href="#contact">Book online</a>
+        <a class="cta outline" href="#services">See what we treat</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="dot"></div>
+      <div class="figure"></div>
+      <div class="leaf"></div>
+    </div>
+  </div>
+</section>
+
+<div class="promise">
+  <div class="container">
+    <div><b>Unrushed sessions</b><span>Real time to assess and treat</span></div>
+    <div><b>Modern assessment</b><span>Movement screening as standard</span></div>
+    <div><b>Massage & sauna</b><span>Private infrared sauna on site</span></div>
+    <div><b>Locally owned</b><span>Trading in Joondanna in 2026</span></div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-h">
+      <div class="eyebrow">What we do</div>
+      <h2>Physiotherapy, massage and movement — all under one calm Joondanna roof.</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">P</div>
+        <h3>Physiotherapy</h3>
+        <p>Hands-on assessment and treatment for back pain, neck pain, sports injuries, post-op rehab and chronic conditions.</p>
+        <a href="#contact">Book a physio session →</a>
+      </div>
+      <div class="card">
+        <div class="ico">M</div>
+        <h3>Therapeutic massage</h3>
+        <p>Targeted remedial and relaxation massage in a quiet studio. Designed to fit alongside your physio plan, not separate from it.</p>
+        <a href="#contact">Book a massage →</a>
+      </div>
+      <div class="card">
+        <div class="ico">W</div>
+        <h3>Wellbeing & sauna</h3>
+        <p>Online wellbeing classes you can do from home, plus our private infrared sauna for recovery between sessions.</p>
+        <a href="#contact">Try the sauna →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="hero-art" aria-hidden="true" style="aspect-ratio:1/.95;border-radius:18px 18px 200px 18px">
+      <div class="dot" style="top:auto;bottom:14%;right:14%;background:var(--paper);opacity:.5"></div>
+      <div class="figure" style="top:35%;border-radius:30% 30% 50% 50% / 65% 65% 35% 35%"></div>
+    </div>
+    <div>
+      <div class="eyebrow" style="color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:14px">How we work</div>
+      <h2>Outcomes first. Always.</h2>
+      <p>We use modern, evidence-based assessment to find the actual cause of your pain or stiffness — not just the place that hurts. Then we build a plan you can stick to, with check-ins so we know it is working.</p>
+      <ol class="steps">
+        <li><b>1.</b><span>Full one-on-one assessment, generally 45 minutes for a first appointment.</span></li>
+        <li><b>2.</b><span>A clear, written plan: what we will do in clinic and what you will do at home.</span></li>
+        <li><b>3.</b><span>Treatment that combines hands-on work, structured exercise and recovery tools.</span></li>
+        <li><b>4.</b><span>Regular review so we know you are progressing — and we can adjust quickly if not.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="story">
+  <div class="container">
+    <blockquote>
+      A small clinic with the time to listen, the tools to help and the plan to keep you out of pain for the long run.
+    </blockquote>
+    <cite>The A Fine Balance promise · Est. Joondanna, Perth</cite>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div>
+      <h2>Find us in Joondanna.</h2>
+      <p>Same-week appointments are usually available. Give us a call, drop us a line or book online — whichever suits.</p>
+      <div class="info">
+        <a href="tel:+61894449663">(08) 9444 9663</a>
+        <a href="mailto:reception@afinebalance.physio">reception@afinebalance.physio</a>
+        <a href="https://maps.google.com/?q=14+Green+Street+Joondanna+WA" target="_blank" rel="noopener">14 Green Street, Joondanna WA</a>
+      </div>
+    </div>
+    <aside class="panel">
+      <h3>Opening hours</h3>
+      <dl>
+        <dt>Monday</dt><dd>8:00 – 19:00</dd>
+        <dt>Tuesday</dt><dd>8:00 – 19:00</dd>
+        <dt>Wednesday</dt><dd>8:00 – 19:00</dd>
+        <dt>Thursday</dt><dd>8:00 – 19:00</dd>
+        <dt>Friday</dt><dd>8:00 – 17:00</dd>
+        <dt>Saturday</dt><dd>By appointment</dd>
+        <dt>Sunday</dt><dd>Closed</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© 2026 A Fine Balance Pty Ltd · ABN 12 142 682 513</span>
+    <span>Concept by Bamozz</span>
+  </div>
+</footer>
+
+</body>
+</html>

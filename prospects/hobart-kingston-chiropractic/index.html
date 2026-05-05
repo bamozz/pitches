@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hobart & Kingston Chiropractic — Tasmania, established 1989</title>
+<style>
+:root{
+  --ink:#0e1c2b;
+  --ink-2:#4d5b6a;
+  --paper:#ffffff;
+  --soft:#f3f5f8;
+  --line:#e2e7ee;
+  --accent:#1d4f8c;
+  --accent-2:#e7a046;
+  --accent-soft:#e8f0fa;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* Top bar */
+.topbar{background:var(--ink);color:#dde3eb;font-size:13.5px}
+.topbar .container{display:flex;justify-content:space-between;gap:16px;padding:10px 24px;flex-wrap:wrap;align-items:center}
+.topbar a:hover{color:#fff}
+.topbar .est{color:var(--accent-2);letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:600}
+
+/* Header */
+header.site{padding:20px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(6px);z-index:5}
+header.site .container{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.brand .mark{
+  width:40px;height:40px;border-radius:10px;background:var(--accent);
+  display:grid;place-items:center;color:#fff;font-weight:800;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.15);
+}
+.brand .name{font-size:18px;letter-spacing:.1px}
+.brand .name small{display:block;font-weight:500;font-size:11.5px;color:var(--ink-2);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+nav.main a{margin-left:24px;color:var(--ink-2);font-size:15px;font-weight:500}
+nav.main a:hover{color:var(--ink)}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:13px 22px;border-radius:8px;font-weight:600;font-size:15px;letter-spacing:.2px;transition:transform .15s ease}
+.cta:hover{transform:translateY(-1px)}
+.cta.outline{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
+
+/* Hero */
+.hero{padding:80px 0 80px;background:linear-gradient(180deg, var(--accent-soft) 0%, transparent 100%)}
+.hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:54px;line-height:1.05;margin:0 0 22px;letter-spacing:-.5px;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lede{font-size:18.5px;color:var(--ink-2);margin:0 0 32px;max-width:520px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);
+  padding:8px 14px;border-radius:999px;font-size:13px;color:var(--ink);font-weight:600;letter-spacing:.04em;margin-bottom:18px;
+}
+.hero .badge .pulse{width:8px;height:8px;border-radius:50%;background:#3aa56e;box-shadow:0 0 0 0 rgba(58,165,110,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,165,110,.6)}70%{box-shadow:0 0 0 12px rgba(58,165,110,0)}100%{box-shadow:0 0 0 0 rgba(58,165,110,0)}}
+.hero-art{
+  aspect-ratio:1/1.05;border-radius:18px;
+  background:
+    linear-gradient(160deg, var(--accent) 0%, #0e3464 100%);
+  position:relative;overflow:hidden;
+  box-shadow:0 30px 60px -28px rgba(14,28,43,.35);
+}
+.hero-art .spine{
+  position:absolute;left:50%;top:8%;bottom:8%;transform:translateX(-50%);
+  width:34%;border-radius:120px;
+  background:repeating-linear-gradient(180deg, rgba(255,255,255,.18) 0 14px, transparent 14px 24px);
+  mask:linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask:linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+.hero-art .ring{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:74%;aspect-ratio:1/1;border-radius:50%;
+  border:1px solid rgba(255,255,255,.18);
+}
+.hero-art .ring.outer{width:96%;border-color:rgba(255,255,255,.1)}
+.hero-art .glow{position:absolute;top:14%;right:14%;width:90px;height:90px;border-radius:50%;background:var(--accent-2);opacity:.85;filter:blur(2px)}
+
+/* Feature grid */
+.features{padding:80px 0}
+.section-h{margin-bottom:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.section-h .eyebrow{color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.section-h h2{font-size:38px;margin:0;letter-spacing:-.4px;line-height:1.15;max-width:680px}
+.section-h p{margin:0;color:var(--ink-2);max-width:340px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 18px 30px -22px rgba(14,28,43,.2)}
+.card .ico{
+  width:46px;height:46px;border-radius:10px;background:var(--accent-soft);
+  display:grid;place-items:center;color:var(--accent);font-weight:800;
+}
+.card h3{margin:0;font-size:19px}
+.card p{margin:0;color:var(--ink-2);font-size:15.5px}
+
+/* Locations */
+.locations{background:var(--soft);padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.loc{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.loc h3{margin:0;font-size:24px;letter-spacing:-.2px}
+.loc .addr{color:var(--ink-2);font-size:15.5px}
+.loc .addr a{color:var(--accent);font-weight:600}
+.loc dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:8px 24px;color:var(--ink-2);font-size:14.5px;border-top:1px solid var(--line);padding-top:14px}
+.loc dt{color:var(--ink);font-weight:500}
+
+/* Story */
+.story{padding:80px 0;background:#fff}
+.story .container{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story h2{font-size:38px;margin:0 0 18px;letter-spacing:-.4px;line-height:1.15}
+.story p{color:var(--ink-2);font-size:17px;margin:0 0 14px}
+.story .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;padding-top:30px;border-top:1px solid var(--line)}
+.story .stats div b{display:block;font-size:34px;color:var(--accent);font-weight:700;line-height:1}
+.story .stats div span{color:var(--ink-2);font-size:13.5px;margin-top:4px;display:block}
+
+/* CTA strip */
+.cta-strip{background:var(--ink);color:#fff;padding:64px 0}
+.cta-strip .container{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.cta-strip h2{margin:0;font-size:30px;letter-spacing:-.3px;line-height:1.2}
+.cta-strip p{color:#cdd5dd;margin:6px 0 0}
+.cta-strip .cta{background:var(--accent-2);color:var(--ink)}
+
+footer{padding:32px 0;color:var(--ink-2);font-size:13px}
+footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+@media (max-width: 880px){
+  .hero{padding:60px 0}
+  .hero .container,.story .container,.cta-strip .container{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:40px}
+  .cards,.loc-grid{grid-template-columns:1fr}
+  .section-h{grid-template-columns:1fr}
+  nav.main{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span class="est">Established 1989</span>
+    <span><a href="tel:+61362316131">Hobart (03) 6231 6131</a> · <a href="tel:+61362297900">Kingston (03) 6229 7900</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="name">Hobart & Kingston Chiropractic<small>Tasmania · Two clinics, one team</small></span>
+    </a>
+    <nav class="main">
+      <a href="#what">Conditions</a>
+      <a href="#approach">Our approach</a>
+      <a href="#locations">Locations</a>
+      <a href="#contact">Book</a>
+    </nav>
+    <a class="cta" href="#contact">Make a booking</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="badge"><span class="pulse"></span> Now welcoming new patients in 2026</span>
+      <h1>Back pain, neck pain or headaches?<br><em>We have helped Tasmanians for 37 years.</em></h1>
+      <p class="lede">Two clinics across southern Tasmania, one careful team. We assess, diagnose and build a clear treatment plan — so you understand what is happening and what we are doing about it.</p>
+      <div class="actions">
+        <a class="cta" href="#contact">Make a booking</a>
+        <a class="cta outline" href="#what">Conditions we treat</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="ring outer"></div>
+      <div class="ring"></div>
+      <div class="spine"></div>
+      <div class="glow"></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="what">
+  <div class="container">
+    <div class="section-h">
+      <div>
+        <div class="eyebrow">What we treat</div>
+        <h2>The everyday complaints we see most — and the careful plan we build for each.</h2>
+      </div>
+      <p>Every plan starts with a thorough assessment. We will tell you honestly if chiropractic is the right fit, or if you would be better served elsewhere.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">H</div>
+        <h3>Headaches & migraines</h3>
+        <p>Tension, cervicogenic and migraine-type headaches that have not responded to general advice or self-management.</p>
+      </div>
+      <div class="card">
+        <div class="ico">L</div>
+        <h3>Low back pain</h3>
+        <p>Acute and chronic low back pain, including pain that travels into the hip or leg, with focused mobility and strength work.</p>
+      </div>
+      <div class="card">
+        <div class="ico">N</div>
+        <h3>Neck pain & stiffness</h3>
+        <p>Desk-related neck stiffness, whiplash and restricted movement, treated with hands-on work and targeted exercise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locations" id="locations">
+  <div class="container">
+    <div class="section-h">
+      <div>
+        <div class="eyebrow">Find us</div>
+        <h2>Two Tasmanian clinics. Same careful team.</h2>
+      </div>
+      <p>Choose whichever clinic suits — your records and treatment plan move with you.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc">
+        <h3>Hobart</h3>
+        <div class="addr">181 Harrington Street, Hobart 7000<br><a href="tel:+61362316131">(03) 6231 6131</a></div>
+        <dl>
+          <dt>Monday – Friday</dt><dd>By appointment</dd>
+          <dt>Saturday</dt><dd>Limited sessions</dd>
+          <dt>Sunday</dt><dd>Closed</dd>
+        </dl>
+      </div>
+      <div class="loc">
+        <h3>Kingston</h3>
+        <div class="addr">3&4 / 7 John Street, Kingston 7050<br><a href="tel:+61362297900">(03) 6229 7900</a></div>
+        <dl>
+          <dt>Monday – Friday</dt><dd>By appointment</dd>
+          <dt>Saturday</dt><dd>Limited sessions</dd>
+          <dt>Sunday</dt><dd>Closed</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="approach">
+  <div class="container">
+    <div>
+      <div class="eyebrow" style="color:var(--accent);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px">Our approach</div>
+      <h2>Thorough assessment. Clear plan. No mystery.</h2>
+      <p>We do not believe in indefinite "once a week forever" plans. Every treatment course starts with a careful diagnosis, includes a written plan with the milestones we expect to hit, and reviews progress at the appropriate point.</p>
+      <p>We work alongside GPs and other health professionals across southern Tasmania. If a referral or imaging is the right next step, we will say so directly.</p>
+      <div class="stats">
+        <div><b>1989</b><span>Year established in Hobart</span></div>
+        <div><b>2</b><span>Clinics across southern Tasmania</span></div>
+        <div><b>10k+</b><span>Tasmanian patients cared for</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true" style="aspect-ratio:1/.95">
+      <div class="ring outer"></div>
+      <div class="ring"></div>
+      <div class="spine"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="contact">
+  <div class="container">
+    <div>
+      <h2>Ready to start? We will call you back today.</h2>
+      <p>Email <a style="color:var(--accent-2)" href="mailto:admin@hobartchiropractic.com.au">admin@hobartchiropractic.com.au</a> or call your nearest clinic directly.</p>
+    </div>
+    <a class="cta" href="mailto:admin@hobartchiropractic.com.au">Make a booking</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Hobart & Kingston Chiropractic · Established 1989</span>
+    <span>Concept by Bamozz</span>
+  </div>
+</footer>
+
+</body>
+</html>
