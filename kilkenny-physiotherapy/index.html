@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kilkenny Physiotherapy & Sports Injury Clinic</title>
+<style>
+:root {
+  --ink: #1c2230;
+  --ink-2: #58616f;
+  --bg: #f7f6f1;
+  --paper: #ffffff;
+  --line: #e3e0d3;
+  --accent: #2a5d3a;
+  --accent-d: #1d4329;
+  --accent-l: #e6efe8;
+  --warm: #e8a04a;
+  --warm-s: #fbeed7;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
+h3 { font-size: 1.18rem; margin-bottom: 10px; }
+p { color: var(--ink-2); }
+a.cta { display: inline-block; background: var(--accent); color: #fff; padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 500; transition: background 0.2s; font-size: 0.95rem; }
+a.cta:hover { background: var(--accent-d); }
+a.cta.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+a.cta.alt:hover { background: var(--accent-l); }
+
+.bar { background: var(--accent-d); color: #e6efe8; font-size: 0.85rem; padding: 9px 0; }
+.bar .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bar a { color: #fff; text-decoration: none; }
+
+.nav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark { width: 44px; height: 44px; border-radius: 12px; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-weight: 600; font-size: 1.4rem; }
+.brand-name { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 500; }
+.brand-name span { display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-top: 2px; font-family: -apple-system, sans-serif; }
+.menu { display: flex; gap: 28px; align-items: center; }
+.menu a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
+.menu a:hover { color: var(--accent); }
+@media (max-width: 800px) { .menu a:not(.cta) { display: none; } }
+
+.hero { padding: 80px 0 56px; }
+.hero .grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); margin-bottom: 18px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero .lede { font-size: 1.15rem; margin: 22px 0 32px; max-width: 480px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-stats { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 480px; }
+.hero-stat strong { display: block; font-family: Georgia, serif; font-size: 1.9rem; color: var(--accent); }
+.hero-stat span { font-size: 0.88rem; color: var(--ink-2); }
+
+.hero-visual { aspect-ratio: 5/6; border-radius: 22px; position: relative; overflow: hidden; background: linear-gradient(140deg, var(--accent-l) 0%, var(--warm-s) 100%); }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 25% 25%, rgba(42, 93, 58, 0.2), transparent 50%), radial-gradient(circle at 75% 75%, rgba(232, 160, 74, 0.25), transparent 55%); }
+.hero-visual .pill { position: absolute; left: 28px; right: 28px; bottom: 28px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 22px 24px; border-radius: 14px; z-index: 2; }
+.hero-visual .pill strong { font-family: Georgia, serif; font-size: 1.2rem; color: var(--accent-d); display: block; margin-bottom: 4px; }
+.hero-visual .pill span { font-size: 0.92rem; color: var(--ink-2); }
+@media (max-width: 800px) { .hero .grid { grid-template-columns: 1fr; gap: 32px; } .hero { padding: 48px 0 32px; } }
+
+section { padding: 80px 0; }
+.section-head { max-width: 720px; margin-bottom: 48px; }
+.section-head .eyebrow { color: var(--accent); }
+
+.problems { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.prob-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.prob { padding: 24px 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); }
+.prob h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--ink); font-family: -apple-system, sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+.prob p { font-size: 0.9rem; }
+@media (max-width: 900px) { .prob-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .prob-grid { grid-template-columns: 1fr; } }
+
+.team .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.team-visual { aspect-ratio: 4/5; border-radius: 22px; background: linear-gradient(160deg, var(--warm-s) 0%, var(--accent-l) 100%); position: relative; overflow: hidden; }
+.team-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(232, 160, 74, 0.3), transparent 50%); }
+.team-visual .quote { position: absolute; left: 32px; right: 32px; bottom: 32px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 24px; border-radius: 14px; z-index: 2; font-family: Georgia, serif; font-size: 1.08rem; color: var(--ink); line-height: 1.45; }
+.team-visual .quote em { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--ink-2); font-style: normal; font-family: -apple-system, sans-serif; }
+.team ul { list-style: none; margin-top: 24px; }
+.team li { padding: 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 14px; }
+.team li::before { content: "→"; color: var(--accent); font-weight: 600; flex-shrink: 0; }
+.team li strong { color: var(--ink); display: block; margin-bottom: 2px; }
+.team li span { color: var(--ink-2); font-size: 0.94rem; }
+@media (max-width: 800px) { .team .grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.locations { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.loc { padding: 28px; border: 1px solid var(--line); border-radius: 14px; }
+.loc h3 { color: var(--accent-d); }
+.loc .meta { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.loc .meta div { font-size: 0.94rem; color: var(--ink-2); }
+.loc .meta strong { color: var(--ink); display: block; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 2px; }
+@media (max-width: 800px) { .loc-grid { grid-template-columns: 1fr; } }
+
+.strip { background: var(--accent-d); color: #fff; padding: 64px 0; text-align: center; }
+.strip h2 { color: #fff; }
+.strip p { color: rgba(255, 255, 255, 0.85); margin: 14px auto 28px; max-width: 540px; }
+.strip .cta { background: var(--warm); color: var(--accent-d); }
+.strip .cta:hover { background: #d68f3a; }
+
+footer { background: var(--ink); color: rgba(255, 255, 255, 0.7); padding: 36px 0; font-size: 0.88rem; text-align: center; }
+footer strong { color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span><a href="tel:0567787123">056 778 7123</a> · Kilkenny + Freshford</span>
+    <span><a href="https://www.kilkennyphysioclinic.com/book-online/">Book online · 7 days</a></span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">K</div>
+      <div class="brand-name">Kilkenny Physiotherapy<span>& Sports Injury Clinic</span></div>
+    </div>
+    <div class="menu">
+      <a href="#problems">What we treat</a>
+      <a href="#team">The team</a>
+      <a href="#locations">Locations</a>
+      <a class="cta" href="https://www.kilkennyphysioclinic.com/book-online/">Book a session</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Established 1994 · Two clinics in Co. Kilkenny</span>
+        <h1>Get back to running, lifting, gardening, <em>or just sitting without pain.</em></h1>
+        <p class="lede">Eight chartered physios working out of Kilkenny City and Freshford. We treat sports injuries, post-op rehab, persistent back and neck pain, and everything in between. Patients aged 3 weeks to 98.</p>
+        <div class="hero-actions">
+          <a class="cta" href="https://www.kilkennyphysioclinic.com/book-online/">Book an appointment</a>
+          <a class="cta alt" href="#problems">See what we treat</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>30+</strong><span>Years in Kilkenny</span></div>
+          <div class="hero-stat"><strong>8</strong><span>Chartered therapists</span></div>
+          <div class="hero-stat"><strong>2</strong><span>Clinic locations</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="pill">
+          <strong>Same-week appointments</strong>
+          <span>Most new bookings seen within 5 days. Online booking 7 days a week.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problems" id="problems">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we treat</span>
+      <h2>If it hurts and stops you doing what you want, we should talk.</h2>
+    </div>
+    <div class="prob-grid">
+      <div class="prob"><h3>Back & neck pain</h3><p>Acute strains, persistent pain, posture-related discomfort. McKenzie-trained therapists for spinal cases.</p></div>
+      <div class="prob"><h3>Sports injuries</h3><p>Hamstring strains, ankle sprains, tennis elbow, runner's knee. Return-to-sport rehab plans.</p></div>
+      <div class="prob"><h3>Post-op rehab</h3><p>Knee replacements, ACL reconstructions, rotator cuff repairs. We work with your surgeon's protocol.</p></div>
+      <div class="prob"><h3>Hand & wrist</h3><p>Specialist hand physiotherapy — splinting, post-fracture rehab, repetitive strain.</p></div>
+      <div class="prob"><h3>Pilates & rehab classes</h3><p>Small-group reformer and mat Pilates, plus dedicated back classes for ongoing recovery.</p></div>
+      <div class="prob"><h3>Headaches & TMJ</h3><p>Tension headaches, migraine triggers, jaw pain. Manual therapy plus home exercises.</p></div>
+      <div class="prob"><h3>Children & teens</h3><p>Growing-pain assessments, scoliosis screening, sports rehab for school-age athletes.</p></div>
+      <div class="prob"><h3>Lymphatic drainage</h3><p>Manual lymphatic drainage post-cancer surgery and for chronic oedema management.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="grid">
+      <div class="team-visual">
+        <div class="quote">
+          "Theresa and the team got my shoulder moving again after the surgeon said I'd be in a sling for six weeks. I was back swinging a hurl in four."
+          <em>— Local patient · Kilkenny City</em>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">The team</span>
+        <h2>Led by Theresa McGinn, a chartered physio for over 30 years.</h2>
+        <p>Theresa founded the clinic in 1994. Since then the team has grown to eight therapists, each with a specialism — hand therapy, McKenzie spinal work, Pilates instruction, athletic therapy and lymphatic drainage among them. You will see the same therapist for follow-up sessions wherever possible.</p>
+        <ul>
+          <li><div><strong>Chartered Physiotherapists, ISCP-registered</strong><span>Every clinician on the team is registered with the Irish Society of Chartered Physiotherapists.</span></div></li>
+          <li><div><strong>Direct access — no GP referral needed</strong><span>You can book straight in. Insurance providers including VHI, Laya and Irish Life are accepted.</span></div></li>
+          <li><div><strong>One therapist throughout your treatment</strong><span>Continuity matters. We aim to keep you with the same physio across your full plan.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locations" id="locations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Find us</span>
+      <h2>Two clinics, easy parking at both.</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc">
+        <h3>Kilkenny City</h3>
+        <p>Our main clinic in the heart of the city, with reformer Pilates studio and a full rehab gym on site.</p>
+        <div class="meta">
+          <div><strong>Hours</strong>Mon – Fri 8:00 – 19:00 · Sat by appointment</div>
+          <div><strong>Phone</strong>056 778 7123</div>
+          <div><strong>Email</strong>info@kilkennyphysioclinic.com</div>
+        </div>
+      </div>
+      <div class="loc">
+        <h3>Freshford</h3>
+        <p>Our second location for North Kilkenny patients — sports injuries, family physio and group Pilates classes.</p>
+        <div class="meta">
+          <div><strong>Hours</strong>Tue & Thu 9:00 – 18:00</div>
+          <div><strong>Phone</strong>056 778 7123</div>
+          <div><strong>Email</strong>info@kilkennyphysioclinic.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <h2>Sore back? Tweaked knee? Don't wait it out.</h2>
+    <p>Most musculoskeletal pain gets faster and cheaper to treat the earlier you catch it. Book an assessment and we will tell you honestly whether you need physio, imaging, or just a few exercises at home.</p>
+    <a class="cta" href="https://www.kilkennyphysioclinic.com/book-online/">Book online now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Kilkenny Physiotherapy & Sports Injury Clinic</strong> · Established 1994<br>
+    Kilkenny City · Freshford · 056 778 7123 · info@kilkennyphysioclinic.com
+  </div>
+</footer>
+
+</body>
+</html>

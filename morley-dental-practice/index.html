@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. John A. Morley Dental Practice — Limerick</title>
+<style>
+:root {
+  --ink: #1d2730;
+  --ink-2: #5a6a78;
+  --bg: #fbfaf6;
+  --paper: #ffffff;
+  --line: #e5dfd1;
+  --accent: #1f5f6b;
+  --accent-d: #154651;
+  --accent-l: #e5eef0;
+  --warm: #c89b6a;
+  --warm-s: #f5ecdf;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); margin-bottom: 16px; }
+h3 { font-size: 1.25rem; margin-bottom: 10px; }
+p { color: var(--ink-2); }
+
+/* Top bar */
+.bar {
+  background: var(--accent-d);
+  color: #f5ecdf;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+.bar .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bar a { color: #f5ecdf; text-decoration: none; }
+.bar strong { color: #fff; }
+
+/* Nav */
+.nav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-d) 100%);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: Georgia, serif; font-size: 1.2rem; font-weight: 600;
+}
+.brand-name { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 500; color: var(--ink); }
+.brand-name span { display: block; font-family: -apple-system, sans-serif; font-size: 0.7rem; color: var(--ink-2); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+.menu { display: flex; gap: 28px; align-items: center; }
+.menu a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
+.menu a:hover { color: var(--accent); }
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cta:hover { background: var(--accent-d); }
+.cta.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.cta.alt:hover { background: var(--accent-l); }
+@media (max-width: 800px) {
+  .menu { display: none; }
+}
+
+/* Hero */
+.hero {
+  padding: 72px 0 48px;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--paper) 100%);
+}
+.hero .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm); margin-bottom: 18px; }
+.hero h1 { color: var(--ink); margin-bottom: 22px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero .lede { font-size: 1.15rem; color: var(--ink-2); margin-bottom: 32px; max-width: 480px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hero-meta { margin-top: 36px; display: flex; gap: 32px; flex-wrap: wrap; }
+.hero-meta div { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; color: var(--ink-2); }
+.hero-meta strong { color: var(--ink); display: block; font-size: 1.05rem; font-family: Georgia, serif; }
+
+.hero-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 24px 48px -28px rgba(20, 70, 81, 0.25);
+}
+.hero-card h3 { color: var(--accent); }
+.hours { margin-top: 16px; }
+.hours div { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 0.93rem; }
+.hours div:last-child { border-bottom: none; }
+.hours strong { color: var(--ink); }
+.hours em { font-style: normal; color: var(--ink-2); }
+.hero-note { background: var(--warm-s); border-radius: 10px; padding: 14px 16px; margin-top: 18px; font-size: 0.9rem; color: var(--accent-d); }
+.hero-note strong { color: var(--ink); }
+@media (max-width: 800px) {
+  .hero .grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero { padding: 48px 0 36px; }
+}
+
+/* Section */
+section { padding: 72px 0; }
+.section-head { max-width: 680px; margin-bottom: 48px; }
+.section-head .eyebrow { color: var(--accent); }
+
+/* Services */
+.services { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.svc {
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.svc:hover { border-color: var(--accent); transform: translateY(-2px); }
+.svc-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: var(--accent-l);
+  color: var(--accent-d);
+  display: flex; align-items: center; justify-content: center;
+  font-family: Georgia, serif; font-size: 1.3rem; font-weight: 600;
+  margin-bottom: 16px;
+}
+.svc h3 { color: var(--ink); }
+.svc p { font-size: 0.95rem; }
+@media (max-width: 800px) {
+  .svc-grid { grid-template-columns: 1fr; }
+}
+
+/* Why */
+.why .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.why-visual {
+  aspect-ratio: 4/5;
+  background:
+    linear-gradient(135deg, var(--warm-s) 0%, var(--accent-l) 100%);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.why-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(31, 95, 107, 0.18), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(200, 155, 106, 0.28), transparent 50%);
+}
+.why-visual .badge {
+  position: absolute;
+  bottom: 32px; left: 32px; right: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 22px 24px;
+  border-radius: 14px;
+  z-index: 2;
+}
+.why-visual .badge strong { display: block; font-family: Georgia, serif; font-size: 1.5rem; color: var(--accent-d); }
+.why-visual .badge span { color: var(--ink-2); font-size: 0.92rem; }
+.why ul { list-style: none; margin-top: 28px; }
+.why li { padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; gap: 14px; align-items: flex-start; }
+.why li::before { content: "✓"; color: var(--accent); font-weight: 600; font-size: 1.15rem; flex-shrink: 0; }
+.why li strong { display: block; color: var(--ink); margin-bottom: 2px; }
+.why li span { color: var(--ink-2); font-size: 0.94rem; }
+@media (max-width: 800px) {
+  .why .grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* CTA strip */
+.strip {
+  background: var(--accent-d);
+  color: #fff;
+  padding: 56px 0;
+  text-align: center;
+}
+.strip h2 { color: #fff; }
+.strip p { color: rgba(255, 255, 255, 0.85); margin: 12px auto 28px; max-width: 520px; }
+.strip .cta { background: var(--warm); color: var(--accent-d); }
+.strip .cta:hover { background: #d8b485; }
+
+/* Contact */
+.contact .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-block { padding: 28px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; }
+.contact-block h3 { color: var(--accent-d); }
+.contact-block p { margin-bottom: 16px; }
+.contact-block a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.contact-block a:hover { text-decoration: underline; }
+.contact-line { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.contact-line span:first-child { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); width: 80px; flex-shrink: 0; padding-top: 2px; }
+@media (max-width: 800px) {
+  .contact .grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Footer */
+footer { background: var(--ink); color: rgba(255, 255, 255, 0.7); padding: 36px 0; font-size: 0.88rem; text-align: center; }
+footer strong { color: #fff; }
+
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span><strong>061 317 781</strong> · 13 Upper Mallow Street, Limerick</span>
+    <span>Emergency patients seen same day</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-name">Dr. John A. Morley<span>Dental Practice · Limerick</span></div>
+    </div>
+    <div class="menu">
+      <a href="#services">Treatments</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="#contact">Book an Appointment</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Established · Independent · Limerick City</span>
+        <h1>Quality dentistry in the heart of Limerick, <em>without the wait.</em></h1>
+        <p class="lede">A long-established family practice on Upper Mallow Street, opposite the People's Park. We see private patients and medical card holders, with early 8am appointments and same-day emergency care.</p>
+        <div class="hero-actions">
+          <a class="cta" href="tel:061317781">Call 061 317 781</a>
+          <a class="cta alt" href="#contact">Email the practice</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>Same-day</strong>emergency appointments</div>
+          <div><strong>From 8am</strong>weekday mornings</div>
+          <div><strong>Medical Card</strong>and private patients welcome</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Opening hours</h3>
+        <div class="hours">
+          <div><strong>Monday – Wednesday</strong><em>8:00 – 16:00</em></div>
+          <div><strong>Thursday</strong><em>Closed</em></div>
+          <div><strong>Friday</strong><em>8:00 – 12:00</em></div>
+          <div><strong>Saturday – Sunday</strong><em>Closed</em></div>
+        </div>
+        <div class="hero-note"><strong>Dental emergency?</strong> Call us first thing in the morning and we will see you the same day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Treatments</span>
+      <h2>Cosmetic and general dentistry, with care taken on every visit.</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-icon">W</div>
+        <h3>Teeth whitening</h3>
+        <p>Custom-fit trays made from your own impressions, finished in our in-house lab. Worn 1-2 hours daily over 14 days for a noticeably brighter smile.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">B</div>
+        <h3>Bridges, veneers and crowns</h3>
+        <p>Customised porcelain restorations designed to last. We talk you through care and maintenance so the work keeps looking good for years.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">F</div>
+        <h3>Cosmetic fillings</h3>
+        <p>Tooth-coloured composite fillings that blend with your natural enamel. Quiet, careful work for nervous patients welcome.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">D</div>
+        <h3>Dentures</h3>
+        <p>Full and partial dentures fitted in-practice, with adjustments and aftercare included. We work with you until they sit comfortably.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">E</div>
+        <h3>Emergency care</h3>
+        <p>If you wake up in pain, call us before 9am and we will see you the same day. No new-patient registration form required for emergencies.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">C</div>
+        <h3>Routine check-ups</h3>
+        <p>Regular exams, cleanings and preventive advice for adults and children. Most appointments take 20-30 minutes from arrival to chair-up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="grid">
+      <div class="why-visual">
+        <div class="badge">
+          <strong>People's Park, Limerick</strong>
+          <span>13 Upper Mallow Street · 2 minutes from O'Connell Street</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Why patients choose us</span>
+        <h2>One of Limerick's longest-established practices.</h2>
+        <p>Patients come to us because we are unhurried, fairly priced and easy to reach. Many have been with the practice for decades — and bring their children and grandchildren in turn.</p>
+        <ul>
+          <li><div><strong>Convenient city-centre location</strong><span>Across from the People's Park, walkable from O'Connell Street with on-street parking nearby.</span></div></li>
+          <li><div><strong>Early appointments</strong><span>Doors open at 8:00am Monday to Friday so you can be in and out before work or school drop-off.</span></div></li>
+          <li><div><strong>Honest, straightforward pricing</strong><span>We talk through costs before any work begins. No upsells, no surprises on the invoice.</span></div></li>
+          <li><div><strong>Medical card and private welcome</strong><span>We treat both medical card holders and private patients with the same care and timing.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <h2>Need to be seen this week?</h2>
+    <p>Call the practice or send us a message and we will offer the next available slot, including same-day emergency openings.</p>
+    <a class="cta" href="tel:061317781">Call 061 317 781</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Come and see us, or call ahead.</h2>
+    </div>
+    <div class="grid">
+      <div class="contact-block">
+        <h3>Practice details</h3>
+        <div class="contact-line"><span>Address</span><div>13 Upper Mallow Street<br>Limerick, Ireland</div></div>
+        <div class="contact-line"><span>Phone</span><a href="tel:061317781">061 317 781</a></div>
+        <div class="contact-line"><span>Email</span><a href="mailto:info@morleydental.ie">info@morleydental.ie</a></div>
+        <div class="contact-line"><span>Hours</span><div>Mon – Wed 8:00 – 16:00<br>Friday 8:00 – 12:00<br>Thursday closed</div></div>
+      </div>
+      <div class="contact-block">
+        <h3>New patients welcome</h3>
+        <p>Whether you are looking for a routine check-up, dealing with a chipped tooth, or considering whitening before a wedding or family event — we are happy to talk through what is involved and what it will cost before you commit to anything.</p>
+        <p>Call us first thing for emergency openings, or email <a href="mailto:info@morleydental.ie">info@morleydental.ie</a> for routine bookings and we will reply the same working day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Dr. John A. Morley Dental Practice</strong> · 13 Upper Mallow Street, Limerick · 061 317 781<br>
+    Independent dental care in Limerick city.
+  </div>
+</footer>
+
+</body>
+</html>

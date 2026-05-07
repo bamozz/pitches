@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiely McCarthy LLP — Solicitors, Limerick</title>
+<style>
+:root {
+  --ink: #14181f;
+  --ink-2: #4f5764;
+  --bg: #f6f4ee;
+  --paper: #ffffff;
+  --line: #ddd6c4;
+  --accent: #1a3556;
+  --accent-d: #11243d;
+  --accent-l: #e7ebf2;
+  --gold: #b08945;
+  --gold-s: #f4ecd9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.012em; line-height: 1.15; }
+h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
+h3 { font-size: 1.18rem; margin-bottom: 10px; }
+p { color: var(--ink-2); }
+a.cta { display: inline-block; background: var(--accent); color: #fff; padding: 13px 26px; border-radius: 4px; text-decoration: none; font-weight: 500; transition: background 0.2s; font-size: 0.95rem; letter-spacing: 0.01em; }
+a.cta:hover { background: var(--accent-d); }
+a.cta.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+a.cta.alt:hover { background: var(--accent-l); }
+a.cta.gold { background: var(--gold); }
+a.cta.gold:hover { background: #946f33; }
+
+.bar { background: var(--accent-d); color: rgba(255,255,255,0.85); font-size: 0.85rem; padding: 9px 0; }
+.bar .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bar a { color: #fff; text-decoration: none; }
+.bar strong { color: var(--gold); }
+
+.nav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark { width: 44px; height: 44px; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-weight: 600; font-size: 1.3rem; border-bottom: 2px solid var(--gold); }
+.brand-name { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 500; }
+.brand-name span { display: block; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); margin-top: 2px; font-family: -apple-system, sans-serif; }
+.menu { display: flex; gap: 28px; align-items: center; }
+.menu a { color: var(--ink); text-decoration: none; font-size: 0.95rem; }
+.menu a:hover { color: var(--accent); }
+@media (max-width: 800px) { .menu a:not(.cta) { display: none; } }
+
+.hero { padding: 80px 0 56px; }
+.hero .grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero .lede { font-size: 1.15rem; margin: 22px 0 32px; max-width: 520px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.callout-num { font-size: 0.92rem; color: var(--ink-2); }
+.callout-num strong { color: var(--ink); display: block; font-family: Georgia, serif; font-size: 1.2rem; }
+
+.hero-side { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 32px; box-shadow: 0 24px 48px -28px rgba(17, 36, 61, 0.25); }
+.hero-side h3 { color: var(--accent); }
+.hero-side p { font-size: 0.95rem; }
+.hero-side ul { list-style: none; margin-top: 18px; }
+.hero-side li { padding: 11px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px; font-size: 0.94rem; }
+.hero-side li::before { content: "✓"; color: var(--gold); font-weight: 600; flex-shrink: 0; }
+.hero-side li:last-child { border-bottom: none; }
+.hero-note { background: var(--gold-s); padding: 14px 16px; border-radius: 6px; margin-top: 16px; font-size: 0.9rem; color: var(--accent-d); }
+.hero-note strong { color: var(--ink); }
+@media (max-width: 800px) { .hero .grid { grid-template-columns: 1fr; gap: 32px; } .hero { padding: 48px 0 32px; } }
+
+section { padding: 80px 0; }
+.section-head { max-width: 720px; margin-bottom: 48px; }
+.section-head .eyebrow { color: var(--accent); }
+
+.areas { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.area-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.area { padding: 28px; border-left: 3px solid var(--gold); background: var(--bg); border-radius: 0 8px 8px 0; }
+.area h3 { color: var(--accent-d); }
+.area p { font-size: 0.95rem; margin-bottom: 12px; }
+.area ul { list-style: none; }
+.area li { font-size: 0.92rem; color: var(--ink-2); padding: 4px 0; padding-left: 18px; position: relative; }
+.area li::before { content: "·"; position: absolute; left: 4px; color: var(--gold); font-size: 1.4rem; line-height: 1; top: 0; }
+@media (max-width: 800px) { .area-grid { grid-template-columns: 1fr; } }
+
+.values .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.values-visual { aspect-ratio: 4/5; border-radius: 6px; background: linear-gradient(160deg, var(--accent-d) 0%, var(--accent) 100%); position: relative; overflow: hidden; }
+.values-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 75% 25%, rgba(176, 137, 69, 0.4), transparent 50%), repeating-linear-gradient(135deg, transparent 0 30px, rgba(255,255,255,0.03) 30px 31px); }
+.values-visual .stamp { position: absolute; left: 32px; bottom: 32px; right: 32px; background: rgba(255, 255, 255, 0.97); padding: 24px; border-radius: 6px; z-index: 2; border-top: 3px solid var(--gold); }
+.values-visual .stamp strong { display: block; font-family: Georgia, serif; font-size: 1.3rem; color: var(--accent-d); margin-bottom: 6px; }
+.values-visual .stamp span { font-size: 0.92rem; color: var(--ink-2); }
+.values ul { list-style: none; margin-top: 24px; }
+.values li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.values li strong { color: var(--ink); display: block; font-family: Georgia, serif; font-size: 1.1rem; margin-bottom: 4px; }
+.values li span { color: var(--ink-2); font-size: 0.94rem; }
+@media (max-width: 800px) { .values .grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.strip { background: var(--accent-d); color: #fff; padding: 64px 0; text-align: center; border-top: 4px solid var(--gold); }
+.strip h2 { color: #fff; }
+.strip p { color: rgba(255, 255, 255, 0.85); margin: 14px auto 28px; max-width: 540px; }
+
+.contact { background: var(--paper); border-top: 1px solid var(--line); }
+.contact .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-block { padding: 32px; background: var(--bg); border-radius: 8px; border-top: 3px solid var(--gold); }
+.contact-block h3 { color: var(--accent-d); }
+.contact-block p { margin-bottom: 14px; }
+.contact-block a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.contact-block a:hover { text-decoration: underline; }
+.contact-line { display: flex; gap: 14px; margin-bottom: 12px; }
+.contact-line span:first-child { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); width: 90px; flex-shrink: 0; padding-top: 2px; }
+@media (max-width: 800px) { .contact .grid { grid-template-columns: 1fr; gap: 24px; } }
+
+footer { background: var(--ink); color: rgba(255, 255, 255, 0.7); padding: 36px 0; font-size: 0.86rem; text-align: center; }
+footer strong { color: #fff; }
+footer .small { display: block; margin-top: 8px; font-size: 0.78rem; color: rgba(255, 255, 255, 0.5); }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span><strong>+353 61 461 024</strong> · 24-hour out-of-hours line</span>
+    <span><a href="mailto:info@kielymccarthy.ie">info@kielymccarthy.ie</a></span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">KM</div>
+      <div class="brand-name">Kiely McCarthy LLP<span>Solicitors · Limerick</span></div>
+    </div>
+    <div class="menu">
+      <a href="#areas">Practice areas</a>
+      <a href="#values">About us</a>
+      <a href="#contact">Contact</a>
+      <a class="cta gold" href="#contact">Request a callback</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Limerick · Established · LLP</span>
+        <h1>When the Garda call, the summons lands or the deadline looms — <em>we are the call you make next.</em></h1>
+        <p class="lede">Kiely McCarthy LLP is a Limerick law firm with over 50 years of collective expertise in criminal defence, regulatory law and civil litigation. Straightforward advice, prepared cases and a 24-hour out-of-hours line for clients who need us urgently.</p>
+        <div class="hero-actions">
+          <a class="cta" href="tel:+35361461024">Call +353 61 461 024</a>
+          <a class="cta alt" href="#contact">Request a callback</a>
+        </div>
+        <div style="margin-top: 36px; display: flex; gap: 36px; flex-wrap: wrap;">
+          <div class="callout-num"><strong>50+ years</strong>Combined experience</div>
+          <div class="callout-num"><strong>24/7</strong>Garda station advice</div>
+          <div class="callout-num"><strong>Fixed-fee</strong>options on most matters</div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <h3>Need a solicitor today?</h3>
+        <p>If you have been arrested, served with a summons, or need urgent advice on an inquest, regulatory hearing or judicial review — call our office or out-of-hours line and we will get you in front of a solicitor the same day.</p>
+        <ul>
+          <li>Garda station representation, day or night</li>
+          <li>Same-day consultations on serious matters</li>
+          <li>Fixed-fee quotes on most criminal and civil work</li>
+          <li>All initial enquiries handled in confidence</li>
+        </ul>
+        <div class="hero-note"><strong>Out-of-hours emergency?</strong> Call the main line — it forwards to a solicitor on call after office hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Practice areas</span>
+      <h2>Three things we do well, day in and day out.</h2>
+    </div>
+    <div class="area-grid">
+      <div class="area">
+        <h3>Criminal law</h3>
+        <p>One of the most experienced criminal defence practices in Limerick City. Our solicitors are recognised industry-wide as experts in serious criminal matters and are available 24 hours for Garda station advice.</p>
+        <ul>
+          <li>Sexual offences and serious indictable matters</li>
+          <li>Drugs, firearms and money laundering</li>
+          <li>Road traffic offences and drink/drug driving</li>
+          <li>Public order and assault offences</li>
+          <li>White-collar and corporate crime</li>
+          <li>Garda station legal advice</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h3>Civil litigation</h3>
+        <p>Personal injury, defamation, judicial review and professional misconduct work for individual clients and businesses across Limerick and the Mid-West.</p>
+        <ul>
+          <li>Personal injury claims*</li>
+          <li>Judicial review and unlawful detention</li>
+          <li>Defamation and privacy</li>
+          <li>Professional misconduct</li>
+          <li>Wardship applications</li>
+          <li>Inquests and coroner's court</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h3>Regulatory law</h3>
+        <p>We act for individuals and businesses facing inquiries from regulatory bodies — Health & Safety Authority, financial regulators, and professional disciplinary panels.</p>
+        <ul>
+          <li>HSA prosecutions and inquiries</li>
+          <li>Regulatory and statutory offences</li>
+          <li>Professional disciplinary matters</li>
+          <li>Extradition proceedings</li>
+        </ul>
+      </div>
+      <div class="area">
+        <h3>How we work</h3>
+        <p>We tell you what your case looks like, what it will cost and what we think your odds are. No surprises, no hourly creep, and a single point of contact for the duration of the matter.</p>
+        <ul>
+          <li>Fixed-fee quotes wherever possible</li>
+          <li>One named solicitor throughout</li>
+          <li>Plain-English correspondence</li>
+          <li>Calls and emails returned same working day</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top: 24px; font-size: 0.85rem; color: var(--ink-2);">* In contentious business, a solicitor may not calculate fees or other charges as a percentage or proportion of any award or settlement.</p>
+  </div>
+</section>
+
+<section class="values" id="values">
+  <div class="wrap">
+    <div class="grid">
+      <div class="values-visual">
+        <div class="stamp">
+          <strong>Reliable. Straight-talking. Limerick-based.</strong>
+          <span>What clients tell us, in their own words, time and again.</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">About us</span>
+        <h2>A small team, a long memory and a city we know well.</h2>
+        <p>Kiely McCarthy LLP has been part of Limerick's legal landscape for decades. We act in the District, Circuit, High and Supreme Courts, and have a network of senior counsel we work with regularly. Most importantly — we know the local Gardaí, the local Courts and the local way of doing things, which matters more than people realise.</p>
+        <ul>
+          <li><strong>Approachable</strong><span>You will speak to a solicitor on the first call, not a gatekeeper. We work hard to make legal matters feel less terrifying than they sound.</span></li>
+          <li><strong>Experienced</strong><span>Over 50 years of combined legal expertise across criminal, civil and regulatory law. Our solicitors have appeared in every Court in the country.</span></li>
+          <li><strong>Discreet</strong><span>Many of our clients come to us at the worst moment of their lives. We treat every consultation as confidential, including the existence of the consultation itself.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <h2>Need to talk to a solicitor?</h2>
+    <p>Whether it is urgent and serious, or just a quick question about where you stand — call us, send an email, or request a callback and we will get you in front of the right person.</p>
+    <a class="cta gold" href="tel:+35361461024">+353 61 461 024</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Same working day, in confidence.</h2>
+    </div>
+    <div class="grid">
+      <div class="contact-block">
+        <h3>Office details</h3>
+        <div class="contact-line"><span>Phone</span><a href="tel:+35361461024">+353 61 461 024</a></div>
+        <div class="contact-line"><span>Email</span><a href="mailto:info@kielymccarthy.ie">info@kielymccarthy.ie</a></div>
+        <div class="contact-line"><span>Hours</span><div>Mon – Fri 9:00 – 17:30<br>Out-of-hours line for arrests and emergencies</div></div>
+        <div class="contact-line"><span>Location</span><div>Limerick City, serving Limerick<br>and the Mid-West region</div></div>
+      </div>
+      <div class="contact-block">
+        <h3>Request a callback</h3>
+        <p>If your matter is not urgent, send a short note about your situation by email and a solicitor will get back to you within one working day. All enquiries are handled in confidence.</p>
+        <p>For arrests, summonses or anything time-sensitive, call directly — out of hours, the main line forwards to a solicitor on call.</p>
+        <a class="cta" href="mailto:info@kielymccarthy.ie">Email the firm</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Kiely McCarthy LLP</strong> · Solicitors · Limerick · +353 61 461 024 · info@kielymccarthy.ie
+    <span class="small">In contentious business, a solicitor may not calculate fees or charges as a percentage or proportion of any award or settlement.</span>
+  </div>
+</footer>
+
+</body>
+</html>

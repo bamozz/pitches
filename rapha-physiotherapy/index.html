@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rapha Physiotherapy — Potong Pasir & Seletar, Singapore</title>
+<style>
+:root {
+  --ink: #161c24;
+  --ink-2: #54616f;
+  --bg: #f6f8fa;
+  --paper: #ffffff;
+  --line: #dde3ea;
+  --accent: #d04040;
+  --accent-d: #a82d2d;
+  --accent-l: #fce8e8;
+  --deep: #1f2937;
+  --deep-l: #e5e8ed;
+  --warm: #f5b042;
+  --warm-s: #fcecd0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.018em; line-height: 1.15; }
+h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 16px; }
+h3 { font-size: 1.18rem; margin-bottom: 10px; }
+p { color: var(--ink-2); }
+a.cta { display: inline-block; background: var(--accent); color: #fff; padding: 14px 28px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: background 0.2s; font-size: 0.95rem; }
+a.cta:hover { background: var(--accent-d); }
+a.cta.alt { background: transparent; color: var(--deep); border: 1px solid var(--deep); }
+a.cta.alt:hover { background: var(--deep-l); }
+a.cta.dark { background: var(--deep); }
+a.cta.dark:hover { background: #0f1822; }
+
+.bar { background: var(--deep); color: rgba(255,255,255,0.85); font-size: 0.85rem; padding: 9px 0; }
+.bar .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.bar a { color: #fff; text-decoration: none; }
+.bar strong { color: var(--warm); }
+
+.nav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-d) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; letter-spacing: -0.02em; }
+.brand-name { font-weight: 700; font-size: 1.05rem; }
+.brand-name span { display: block; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); margin-top: 2px; font-weight: 500; }
+.menu { display: flex; gap: 28px; align-items: center; }
+.menu a { color: var(--ink); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.menu a:hover { color: var(--accent); }
+@media (max-width: 800px) { .menu a:not(.cta) { display: none; } }
+
+.hero { padding: 80px 0 56px; }
+.hero .grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .lede { font-size: 1.15rem; margin: 22px 0 32px; max-width: 520px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-stats { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 480px; }
+.hero-stat strong { display: block; font-size: 1.9rem; color: var(--deep); font-weight: 800; letter-spacing: -0.02em; }
+.hero-stat span { font-size: 0.86rem; color: var(--ink-2); }
+
+.hero-visual { aspect-ratio: 5/6; border-radius: 24px; background: linear-gradient(140deg, var(--accent-l) 0%, var(--warm-s) 100%); position: relative; overflow: hidden; }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(208, 64, 64, 0.18), transparent 50%), radial-gradient(circle at 70% 80%, rgba(245, 176, 66, 0.28), transparent 50%); }
+.hero-visual .quote { position: absolute; left: 28px; right: 28px; bottom: 28px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); padding: 24px; border-radius: 16px; z-index: 2; }
+.hero-visual .quote p { font-style: italic; color: var(--ink); font-size: 0.98rem; margin-bottom: 12px; line-height: 1.45; }
+.hero-visual .quote em { font-style: normal; font-size: 0.85rem; color: var(--ink-2); display: block; }
+.hero-visual .stars { color: var(--warm); margin-bottom: 8px; letter-spacing: 0.1em; }
+@media (max-width: 800px) { .hero .grid { grid-template-columns: 1fr; gap: 32px; } .hero { padding: 48px 0 32px; } }
+
+section { padding: 80px 0; }
+.section-head { max-width: 720px; margin-bottom: 48px; }
+
+.what { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.what-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.what-card { padding: 32px 28px; background: var(--bg); border-radius: 18px; border: 1px solid var(--line); transition: border-color 0.2s, transform 0.2s; }
+.what-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.what-num { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; color: var(--accent); margin-bottom: 14px; }
+.what-card h3 { color: var(--ink); }
+.what-card p { font-size: 0.95rem; }
+.what-card ul { list-style: none; margin-top: 14px; }
+.what-card li { font-size: 0.9rem; color: var(--ink-2); padding: 4px 0 4px 18px; position: relative; }
+.what-card li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+@media (max-width: 800px) { .what-grid { grid-template-columns: 1fr; } }
+
+.how .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.how-visual { aspect-ratio: 4/5; border-radius: 24px; background: linear-gradient(160deg, var(--deep) 0%, #0d1620 100%); position: relative; overflow: hidden; }
+.how-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 75% 30%, rgba(208, 64, 64, 0.35), transparent 50%), radial-gradient(circle at 25% 75%, rgba(245, 176, 66, 0.2), transparent 50%); }
+.how-visual .stamp { position: absolute; left: 32px; bottom: 32px; right: 32px; background: rgba(255,255,255,0.97); padding: 26px; border-radius: 16px; z-index: 2; }
+.how-visual .stamp strong { display: block; font-size: 1.3rem; color: var(--ink); margin-bottom: 6px; font-weight: 700; }
+.how-visual .stamp span { font-size: 0.92rem; color: var(--ink-2); }
+.how ol { list-style: none; counter-reset: step; margin-top: 24px; }
+.how li { padding: 18px 0; border-bottom: 1px solid var(--line); display: flex; gap: 18px; counter-increment: step; }
+.how li::before { content: counter(step, decimal-leading-zero); font-weight: 700; color: var(--accent); flex-shrink: 0; font-size: 1.1rem; padding-top: 2px; }
+.how li strong { color: var(--ink); display: block; margin-bottom: 4px; }
+.how li span { color: var(--ink-2); font-size: 0.94rem; }
+@media (max-width: 800px) { .how .grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.locations { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.loc { padding: 32px; background: var(--bg); border-radius: 18px; border: 1px solid var(--line); }
+.loc h3 { color: var(--ink); }
+.loc .where { font-weight: 600; color: var(--accent); font-size: 0.86rem; letter-spacing: 0.04em; margin-bottom: 10px; }
+.loc .meta { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.loc .meta div { font-size: 0.94rem; color: var(--ink-2); }
+.loc .meta strong { color: var(--ink); display: block; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 2px; font-weight: 700; }
+@media (max-width: 800px) { .loc-grid { grid-template-columns: 1fr; } }
+
+.strip { background: var(--deep); color: #fff; padding: 64px 0; text-align: center; }
+.strip h2 { color: #fff; }
+.strip p { color: rgba(255,255,255,0.85); margin: 14px auto 28px; max-width: 540px; }
+.strip .cta { background: var(--accent); }
+.strip .cta:hover { background: var(--accent-d); }
+
+footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 36px 0; font-size: 0.86rem; text-align: center; }
+footer strong { color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span><strong>WhatsApp 8113 4164</strong> · Potong Pasir + Seletar</span>
+    <span><a href="https://clinic.platomedical.com/book/cmFwaGFwaHlzaW8=/e86bb2e243d94736a290b14d22e5966d">Book online — 7 days</a></span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div class="brand-name">Rapha Physiotherapy<span>Singapore</span></div>
+    </div>
+    <div class="menu">
+      <a href="#what">What we treat</a>
+      <a href="#how">How it works</a>
+      <a href="#locations">Locations</a>
+      <a class="cta" href="https://clinic.platomedical.com/book/cmFwaGFwaHlzaW8=/e86bb2e243d94736a290b14d22e5966d">Book a session</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Potong Pasir · Seletar · Singapore</span>
+        <h1>Reclaim the lifestyle your <em>knee, shoulder or back</em> took from you.</h1>
+        <p class="lede">Evidence-based physiotherapy in Potong Pasir and Seletar. We diagnose what's actually wrong, fix it with hands-on treatment plus prescribed exercises, and discharge you when you're better — not when your sessions run out.</p>
+        <div class="hero-actions">
+          <a class="cta" href="https://clinic.platomedical.com/book/cmFwaGFwaHlzaW8=/e86bb2e243d94736a290b14d22e5966d">Book online</a>
+          <a class="cta alt" href="tel:+6581134164">WhatsApp 8113 4164</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>2</strong><span>Clinic locations</span></div>
+          <div class="hero-stat"><strong>1:1</strong><span>Therapist throughout</span></div>
+          <div class="hero-stat"><strong>Evidence-based</strong><span>Treatment approach</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="quote">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Rapha has been my go-to for every sports injury — knee from running, shoulder from swimming, wrist from a bike fall. Hanniel diagnoses the issue almost immediately and prescribes exercises that actually work. Recovered fast every time."</p>
+          <em>— Rica, sports enthusiast</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="what" id="what">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we treat</span>
+      <h2>If pain is making you change how you move, we should look at it.</h2>
+    </div>
+    <div class="what-grid">
+      <div class="what-card">
+        <span class="what-num">SPORTS</span>
+        <h3>Sports & overuse injuries</h3>
+        <p>Running, swimming, cycling, racquet sports — most acute injuries respond fast when caught early.</p>
+        <ul>
+          <li>Runner's knee, ITB and shin splints</li>
+          <li>Tennis & golfer's elbow</li>
+          <li>Swimmer's & rotator cuff shoulder</li>
+          <li>Ankle sprains and Achilles pain</li>
+        </ul>
+      </div>
+      <div class="what-card">
+        <span class="what-num">SPINE</span>
+        <h3>Back, neck & posture</h3>
+        <p>Persistent desk-related back and neck pain, sciatica, and posture issues from long hours seated.</p>
+        <ul>
+          <li>Chronic lower back pain</li>
+          <li>Neck pain and tension headaches</li>
+          <li>Sciatica and disc-related pain</li>
+          <li>Postural assessment and correction</li>
+        </ul>
+      </div>
+      <div class="what-card">
+        <span class="what-num">REHAB</span>
+        <h3>Post-surgical rehab</h3>
+        <p>Working with your surgeon's protocol to get you back to walking, working and moving without pain.</p>
+        <ul>
+          <li>Knee replacement and ACL rehab</li>
+          <li>Rotator cuff and shoulder surgery</li>
+          <li>Post-fracture mobilisation</li>
+          <li>Return-to-work and return-to-sport plans</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="grid">
+      <div class="how-visual">
+        <div class="stamp">
+          <strong>Same therapist, every session.</strong>
+          <span>Continuity isn't a nice-to-have — it's how we shave weeks off your recovery.</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2>Three sessions to know whether physio is the answer.</h2>
+        <p>If we can't show you a measurable improvement in three sessions, we'll tell you straight — and refer you on if your case needs imaging, a surgeon or a different specialist. We are not the right answer for everyone, and we'd rather you knew that early.</p>
+        <ol>
+          <li><div><strong>First session: assessment & treatment</strong><span>60-minute first appointment. We diagnose what's actually causing the pain — not just where it hurts — and start treatment the same day.</span></div></li>
+          <li><div><strong>Second & third: hands-on plus homework</strong><span>Manual therapy in clinic, plus a prescribed exercise plan you actually follow because it takes 10 minutes a day, not 45.</span></div></li>
+          <li><div><strong>Discharge when you're better</strong><span>We don't book you in for sessions you don't need. Once you're moving freely and pain-free, we discharge with a maintenance plan.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locations" id="locations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Find us</span>
+      <h2>Two locations across Singapore — pick the one closest to home or work.</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc">
+        <div class="where">CENTRAL · POTONG PASIR</div>
+        <h3>Rapha Physiotherapy (Potong Pasir)</h3>
+        <p>Our main clinic — full assessment and treatment hours, 6 days a week.</p>
+        <div class="meta">
+          <div><strong>Address</strong>2 Tai Thong Crescent, Venue Shoppes #01-22, Singapore 347836</div>
+          <div><strong>Hours</strong>Mon–Fri 9:00 – 20:00 · Sat 9:00 – 13:00</div>
+          <div><strong>Contact</strong>WhatsApp 8113 4164 · info@raphaphysiotherapy.com.sg</div>
+        </div>
+      </div>
+      <div class="loc">
+        <div class="where">NORTH-EAST · SELETAR</div>
+        <h3>Rapha Physiotherapy (Seletar)</h3>
+        <p>Inside Island Family Clinic — evening sessions for working professionals in the Sengkang area.</p>
+        <div class="meta">
+          <div><strong>Address</strong>455 Sengkang West Ave, #01-14, Singapore 790455</div>
+          <div><strong>Hours</strong>Wed & Thu 18:00 – 22:00 (by appointment)</div>
+          <div><strong>Contact</strong>WhatsApp 8113 4164 · info@raphaphysiotherapy.com.sg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <h2>Pain that's lasted more than a week? Don't wait it out.</h2>
+    <p>Most musculoskeletal pain gets quicker and cheaper to treat the earlier you catch it. Book online or WhatsApp us — we'll tell you honestly whether physio is the right call for your case.</p>
+    <a class="cta" href="https://clinic.platomedical.com/book/cmFwaGFwaHlzaW8=/e86bb2e243d94736a290b14d22e5966d">Book a session online</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Rapha Physiotherapy</strong> · Potong Pasir & Seletar, Singapore<br>
+    WhatsApp 8113 4164 · info@raphaphysiotherapy.com.sg
+  </div>
+</footer>
+
+</body>
+</html>
